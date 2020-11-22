@@ -11,14 +11,14 @@ import AboutMe from './Component/pages/AboutMe'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <NavigationBar />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/about-me' exact component={AboutMe}/>
-          <Route path='/github-repos' exact component={GithubRepositories}/>
-          <Route path='/cybortics-humanoid' exact component={CyborticsHumanoids}/>
-          <Route path='/contact-me'/>
+          <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
+          <Route path={process.env.PUBLIC_URL + '/about-me'} exact component={AboutMe}/>
+          <Route path={process.env.PUBLIC_URL + '/github-repos'} exact component={GithubRepositories}/>
+          <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids}/>
+          <Route path={process.env.PUBLIC_URL + '/contact-me'}/>
           {/* <Route path='' exact component={}/> */}
           {/* <Route path='' exact component={}/> */}
           {/* <Route path='' exact component={}/> */}
@@ -26,7 +26,7 @@ function App() {
           {/* <Route path='' exact component={}/> */}
           {/* <Route path='' exact component={}/> */}
         </Switch>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
