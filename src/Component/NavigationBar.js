@@ -4,6 +4,7 @@ import { Button } from './Button';
 
 import './NavigationBar.css'
 import { HashLink } from 'react-router-hash-link';
+
 function NavigationBar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);

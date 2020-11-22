@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import NavigationBar from './Component/NavigationBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Component/pages/Home'
 import GithubRepositories from './Component/pages/GithubRepositories'
 import CyborticsHumanoids from './Component/pages/CyborticsHumanoid'
@@ -18,7 +18,9 @@ function App() {
           <Route path='/about-me' exact component={AboutMe}/>
           <Route path='/github-repos' exact component={GithubRepositories}/>
           <Route path='/cybortics-humanoid' exact component={CyborticsHumanoids}/>
-          {/* <Route path='' exact component={}/> */}
+          <Route path='/projects'>
+          </Route>
+          <Route path='/contact-me'/>
           {/* <Route path='' exact component={}/> */}
           {/* <Route path='' exact component={}/> */}
           {/* <Route path='' exact component={}/> */}

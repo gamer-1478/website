@@ -14,7 +14,7 @@ function HeroSection() {
                 <Button path='/about-me' pathclassName='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
                     About Me
                 </Button>
-                <Button path='/projects' className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
+                <Button path='/#projects' className='btns' buttonStyle='btn--primary' buttonSize='btn--large' offset='80'>
                     MY PROJECTS
                 </Button>
             </div>

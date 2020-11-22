@@ -1,6 +1,6 @@
 import React from 'react';
 import './Button.css';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
@@ -12,7 +12,8 @@ export const Button = ({
     onClick,
     buttonStyle,
     buttonSize,
-    path
+    path,
+    offset
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle)
         ? buttonStyle
@@ -21,7 +22,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
-        <Link to={path} className='btn-mobile'>
+        <HashLink to={path} className='btn-mobile' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -offset) }}>
             <button
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
@@ -29,6 +30,6 @@ export const Button = ({
             >
                 {children}
             </button>
-        </Link>
+        </HashLink>
     );
 };

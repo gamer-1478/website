@@ -46,6 +46,7 @@ function Footer() {
             <Link to='/'>Facebook</Link>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
+            <Link to=''>Discord</Link>
           </div>
         </div>
       </div>
@@ -91,12 +92,20 @@ function Footer() {
               <i class='fab fa-twitter' />
             </Link>
             <Link
-              class='social-icon-link twitter'
+              class='social-icon-link linkedin'
               to='/'
               target='_blank'
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
+            </Link>
+            <Link
+              className='social-icon-link discord'
+              to='/'
+              target='_blank'
+              aria-label='discord'
+              >
+                <i class='fab fa-discord'/>
             </Link>
           </div>
         </div>
