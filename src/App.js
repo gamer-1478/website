@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import NavigationBar from './Component/NavigationBar';
-import { BrowserRouter as Router, Switch, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './Component/pages/Home'
 import GithubRepositories from './Component/pages/GithubRepositories'
 import CyborticsHumanoids from './Component/pages/CyborticsHumanoid'
