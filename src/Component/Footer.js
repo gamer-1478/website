@@ -2,6 +2,10 @@ import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
 
 function Footer() {
   return (
@@ -28,25 +32,26 @@ function Footer() {
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <Link to='/about-me'><h2>About Me</h2></Link>
-            <Link to='/github-repos'>Github Repositories</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='about-me'><h2>About Me</h2></Link>
+            <Link to='github-repos'>Github Repositories</Link>
+            <Link to='/testimonials'>Testimonials</Link>
+            <a href='/LICENSE.txt' target='_blank'>Terms of Service</a>
           </div>
           <div class='footer-link-items'>
             <Link to='/contact-me'><h2>Contact Me</h2></Link>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
+            <Link to='/contact-me'>Contact</Link>
+            <Link to='/contact-me'>Support</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-            <Link to=''>Discord</Link>
+            <Link to='' onClick={() => { openInNewTab("https://www.instagram.com/aayushgarg.official") }}>Instagram</Link>
+            <Link onClick={() => { openInNewTab("https://www.facebook.com/aayush.garg.official") }}>Facebook</Link>
+            <Link onClick={() => { openInNewTab("https://youtube.com/404lolIamNotOnYoutube") }}>Youtube</Link>
+            <Link onClick={() => { openInNewTab("https://twitter.com/aayushg36875133") }}>Twitter</Link>
+            <Link onClick={() => { openInNewTab("https://discord.gg/dRw2RHDM") }}>Discord</Link>
+            <Link onClick={() => { openInNewTab("https://linkedin.com/404lolIamNotOnLinkedIn") }}>LinkedIn</Link>
           </div>
         </div>
       </div>
@@ -61,51 +66,45 @@ function Footer() {
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://www.facebook.com/aayush.garg.official") }}
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://www.instagram.com/aayushgarg.official") }}
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://youtube.com/404lolIamNotOnYoutube") }}
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://twitter.com/aayushg36875133") }}
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
             </Link>
             <Link
               class='social-icon-link linkedin'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://linkedin.com/404lolIamNotOnLinkedIn") }}
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
             </Link>
             <Link
               className='social-icon-link discord'
-              to='/'
-              target='_blank'
+              onClick={() => { openInNewTab("https://discord.gg/dRw2RHDM") }}
               aria-label='discord'
-              >
-                <i class='fab fa-discord'/>
+            >
+              <i class='fab fa-discord' />
             </Link>
           </div>
         </div>

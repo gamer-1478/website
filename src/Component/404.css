@@ -1,0 +1,25 @@
+.app{
+    display: block;
+    height: 90vh;
+    line-height: 40px;
+    background-image: url("../image/404.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    position: relative;
+}
+.texttopp{
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+}
+.textbott{
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+}

@@ -1,0 +1,45 @@
+/* just normal css stuff is pretty much magic to me, i add stuff, if it works great if not add and remove stuff, css is = {witch magic} all css, rise !!!! praise css lords. xd*/
+:root {
+    --main: #fff;
+  }
+  
+  .crd {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .crd--square {
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 10px 10px 0;
+    padding: 10px 21px;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #a5e7d9;
+    float: left;
+  }
+  
+  .crd--large {
+    padding: 12px 26px;
+    font-size: 20px;
+  }
+  
+  button:hover {
+    background-color: #ccdbd1;
+  }
+  .crd--large:hover{
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+  
