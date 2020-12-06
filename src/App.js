@@ -9,6 +9,8 @@ import AboutMe from './Component/pages/AboutMe'
 import Aihome from "./Component/Aihome";
 import Footer from './Component/Footer'
 import fourzerofour from "./Component/404";
+import Testimonials from './Component/pages/Testimonials'
+
 function App() {
   return (
     <>
@@ -19,14 +21,14 @@ function App() {
           <Route path={process.env.PUBLIC_URL + '/about-me'} exact component={AboutMe} />
           <Route path={process.env.PUBLIC_URL + '/github-repos'} exact component={GithubRepositories} />
           <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids} />
-          <Route path={process.env.PUBLIC_URL + '/contact-me'} />
           <Route path={process.env.PUBLIC_URL + '/artificialTechnologyHomework'}>
             <Redirect to={process.env.PUBLIC_URL + '/ai'} />
           </Route>
           <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
-          <Route path="*" exact component={fourzerofour}/>
+          <Route path={process.env.PUBLIC_URL + '/testimonials'} exact component={Testimonials } />
+          <Route path="*" exact component={fourzerofour} />
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );
