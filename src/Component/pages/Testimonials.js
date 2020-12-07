@@ -43,22 +43,30 @@ function Testimonials() {
             '" has been identified as profane ,if this is a mistake contact-me!!',
         )
       } else {
-        if (snaapshot.empty === true) {
-          testimonyread.add({
-            name: name,
-            testimony: Testimonial,
-          })
-          Setsuccessem(true)
+        if (Testimonial.length > 10 || name.length> 5) {
+          if (snaapshot.empty === true) {
+            testimonyread.add({
+              name: name,
+              testimony: Testimonial,
+            })
+            Setsuccessem(true)
+          } else {
+            SetDisplayError(true)
+            SetErrorr(
+              'This name has alread added an testimony, if this is a mistake contact-me!!',
+            )
+          }
         } else {
           SetDisplayError(true)
           SetErrorr(
-            'This name has alread added an testimony, if this is a mistake contact-me!!',
+            'Your name or testimony is too short, please write testimony or name that is longer than a single word.',
           )
         }
       }
     }
   }
   async function Gettestimon() {
+    alldoc = []
     const snapshot = await testimonyread.where('testimony', '!=', null).get()
     if (!snapshot.empty) {
       snapshot.forEach((doc) => {
@@ -68,13 +76,13 @@ function Testimonials() {
   }
   useEffect(() => {
     async function getTok() {
-      alldoc = []
-      await Gettestimon()
-      alldoc.map((forget) => console.log(forget.name))
-      setcondi(true)
+      await Gettestimon();
+      alldoc.map((forget) => console.log(forget.name));
+      setcondi(true);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     getTok()
-  })
+  }, [alldoc])
   return (
     <>
       <h1 className="testimonials">Testimonies</h1>
