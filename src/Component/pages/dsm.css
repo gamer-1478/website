@@ -1,0 +1,32 @@
+.box{
+    align-items: center;
+    width: 50%;
+    border: 5px solid black;
+    margin: 20px;
+    font-size: 15pt;
+    padding: 1em;
+}
+.container{
+    display: flex;
+    
+}
+.box>h2{
+    font-size: 24pt;
+    margin: 10px;
+}
+h1{
+    font-size: 38pt;
+}
+h3{
+    margin-top: 30px;
+}
+p{
+    margin: 3px 0px 0px 50px;
+}
+.btttn{
+    font-size: 12pt;
+    margin:10px;
+    height: 40px;
+    text-align: center;
+    padding: 0.5em 1em 0.5em 1em;
+}

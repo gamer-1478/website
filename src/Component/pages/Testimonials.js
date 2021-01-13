@@ -82,7 +82,7 @@ function Testimonials() {
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     getTok()
-  }, [alldoc])
+  }, [condi])
   return (
     <>
       <h1 className="testimonials">Testimonies</h1>

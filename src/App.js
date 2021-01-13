@@ -10,6 +10,7 @@ import Aihome from "./Component/Aihome";
 import Footer from './Component/Footer'
 import fourzerofour from "./Component/404";
 import Testimonials from './Component/pages/Testimonials'
+import Dsm from './Component/pages/dsm'
 
 function App() {
   return (
@@ -26,9 +27,10 @@ function App() {
           </Route>
           <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
           <Route path={process.env.PUBLIC_URL + '/testimonials'} exact component={Testimonials } />
+          <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={Dsm} />
           <Route path="*" exact component={fourzerofour} />
         </Switch>
-        <Footer />
+        <Footer/>
       </Router>
     </>
   );
