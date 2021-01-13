@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from './Button'
 import './HeroSection.css'
 import '../App.css'
-import { Link, Redirect } from 'react-router-dom'
 
 function HeroSection() {
     return (

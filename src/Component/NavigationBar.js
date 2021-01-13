@@ -58,13 +58,18 @@ function NavigationBar() {
                                 Github Repositories
                         </Link>
                         </li>
-                        <li>
-                            <Link to='/contact-me' className='nav-links-mobile' onClick={closeMobileMenu}>
-                                Contant me
+                        <li className='nav-item'>
+                            <Link to='/testimonials' className='nav-links' onClick={closeMobileMenu}>
+                                Testimonials
                         </Link>
                         </li>
+                        <li>
+                            <HashLink to='/about-me#contact-me' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} className='nav-links-mobile' onClick={closeMobileMenu}>
+                                Contant me
+                        </HashLink>
+                        </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline' path='/contact-me'>Contact Me</Button>}
+                    {button && <Button buttonStyle='btn--outline' offset='80' path='/about-me#contact-me'>Contact Me</Button>}
                 </div>
             </nav>
         </>
