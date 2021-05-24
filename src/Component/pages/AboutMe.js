@@ -12,7 +12,7 @@ export default function AboutMe() {
     <div>
       <h1 className='aboutme'>ABOUT ME</h1>
       <img className='aboutme-image' width='400px' src={myimg} alt='myImage' />
-      <p className='Text'> Hi i am aayush garg, i am 14 years old and know programming. {'\n'}
+      <p className='Text'> Hi i am aayush garg, i am 15 years old and know programming. {'\n'}
     I didn't learn from any website, but if you ask me i will recommend youtube, {'\n'}
     don't even try whitehat those people deserve a special place in hell</p>
       <p className='Text'>I don't sell anything nor promote any good's. i'm not affilated with anyone,
@@ -23,7 +23,7 @@ export default function AboutMe() {
       <div className='Icon'>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://www.facebook.com/aayush.garg.official") }}
+          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+facebook") }}
           aria-label='Facebook'
           style={{ color: '#000000' }}
         >
@@ -39,7 +39,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://youtube.com/404lolIamNotOnYoutube") }}
+          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+youtube") }}
           aria-label='Youtube'
           style={{ color: '#000000' }}
         >
@@ -47,7 +47,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://twitter.com/aayushg36875133") }}
+          onClick={() => { openInNewTab("https://twitter.com/AayushG_offcl") }}
           aria-label='Twitter'
           style={{ color: '#000000' }}
         >
@@ -55,7 +55,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://linkedin.com/404lolIamNotOnLinkedIn") }}
+          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+linkedin") }}
           aria-label='LinkedIn'
           style={{ color: '#000000' }}
         >
@@ -63,7 +63,7 @@ export default function AboutMe() {
         </Link>
         <Link
           className='Icon-indi'
-          onClick={() => { openInNewTab("https://discord.gg/dRw2RHDM") }}
+          onClick={() => { openInNewTab("https://discord.com/users/823237564130525184") }}
           aria-label='discord'
           style={{ color: '#000000' }}
         >
@@ -74,8 +74,7 @@ export default function AboutMe() {
       <div className='aboutme' id='contact-me'>
         <hr />
         <h1 className='aboutme'>CONTACT ME</h1>
-        <p className='Textp'> for buissness purposes to contact me on email:- contact@aayushgarg.net </p>
-        <p className='Textp'> for personal purposes and use email:- me@aayushgarg.net </p>
+        <p className='Textp'> contact me on email:- argtech.1234@gmail.com </p>
       </div>
     </div>
   )
