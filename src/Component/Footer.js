@@ -6,6 +6,12 @@ import firebase from "../firebase";
 import { HashLink } from 'react-router-hash-link';
 
 //import {usePopper} from 'react-popper';
+const discord = "https://discord.com/users/823237564130525184";
+const instagram = "https://www.instagram.com/aayushgarg.official";
+const youtube = "https://www.google.com/search?q=not+on+youtube"
+const twitter = "https://twitter.com/AayushG_offcl";
+const linkedin = "https://www.google.com/search?q=not+on+linkedin";
+const Facebook = "https://www.google.com/search?q=not+on+facebook";
 
 const currentDate = new Date();
 const timestamp = currentDate.getTime();
@@ -108,12 +114,12 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='' onClick={() => { openInNewTab("https://www.instagram.com/aayushgarg.official") }}>Instagram</Link>
-            <Link onClick={() => { openInNewTab("https://www.facebook.com/aayush.garg.official") }}>Facebook</Link>
-            <Link onClick={() => { openInNewTab("https://youtube.com/404lolIamNotOnYoutube") }}>Youtube</Link>
-            <Link onClick={() => { openInNewTab("https://twitter.com/aayushg36875133") }}>Twitter</Link>
-            <Link onClick={() => { openInNewTab("https://discord.gg/dRw2RHDM") }}>Discord</Link>
-            <Link onClick={() => { openInNewTab("https://linkedin.com/404lolIamNotOnLinkedIn") }}>LinkedIn</Link>
+            <Link to='' onClick={() => { openInNewTab(instagram) }}>Instagram</Link>
+            <Link onClick={() => { openInNewTab(Facebook) }}>Facebook</Link>
+            <Link onClick={() => { openInNewTab(youtube) }}>Youtube</Link>
+            <Link onClick={() => { openInNewTab(twitter) }}>Twitter</Link>
+            <Link onClick={() => { openInNewTab(discord) }}>Discord</Link>
+            <Link onClick={() => { openInNewTab(linkedin) }}>LinkedIn</Link>
           </div>
         </div>
       </div>
@@ -128,42 +134,42 @@ function Footer() {
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
-              onClick={() => { openInNewTab("https://www.facebook.com/aayush.garg.official") }}
+              onClick={() => { openInNewTab(Facebook) }}
               aria-label='Facebook'
             >
               <i className='fab fa-facebook-f' />
             </Link>
             <Link
               className='social-icon-link instagram'
-              onClick={() => { openInNewTab("https://www.instagram.com/aayushgarg.official") }}
+              onClick={() => { openInNewTab(instagram) }}
               aria-label='Instagram'
             >
               <i className='fab fa-instagram' />
             </Link>
             <Link
               className='social-icon-link youtube'
-              onClick={() => { openInNewTab("https://youtube.com/404lolIamNotOnYoutube") }}
+              onClick={() => { openInNewTab(youtube) }}
               aria-label='Youtube'
             >
               <i className='fab fa-youtube' />
             </Link>
             <Link
               className='social-icon-link twitter'
-              onClick={() => { openInNewTab("https://twitter.com/aayushg36875133") }}
+              onClick={() => { openInNewTab(twitter) }}
               aria-label='Twitter'
             >
               <i className='fab fa-twitter' />
             </Link>
             <Link
               className='social-icon-link linkedin'
-              onClick={() => { openInNewTab("https://linkedin.com/404lolIamNotOnLinkedIn") }}
+              onClick={() => { openInNewTab(linkedin) }}
               aria-label='LinkedIn'
             >
               <i className='fab fa-linkedin' />
             </Link>
             <Link
               className='social-icon-link discord'
-              onClick={() => { openInNewTab("https://discord.gg/dRw2RHDM") }}
+              onClick={() => { openInNewTab(discord) }}
               aria-label='discord'
             >
               <i className='fab fa-discord' />
