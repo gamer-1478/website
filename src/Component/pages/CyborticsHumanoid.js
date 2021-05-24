@@ -88,6 +88,9 @@ export default function CyborticsHumanoids() {
           data to another module and learn in the process. this master module
           also has emotion module to simulate and feel human emotion.<br></br>
         </p>
+        <p className="centerlp">
+          <a href="https://github.com/aayushGarg-1748/inmoov-humanoid-robot">Link to hardware files</a> = https://github.com/aayushGarg-1748/inmoov-humanoid-robot
+        </p>
       </div>
     </>
   )
