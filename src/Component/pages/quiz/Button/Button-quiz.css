@@ -1,0 +1,62 @@
+/* just normal css stuff is pretty much magic to me, i add stuff, if it works great if not add and remove stuff, css is = {witch magic} all css, rise !!!! praise css lords. xd*/
+:root {
+  --main: #fff;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--main {
+  background-color: var(--main);
+  color: #242424;
+  border: 1px solid var(--main);
+}
+
+.btn--silhouette {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--main);
+  transition: all 0.3s ease-out;
+}
+.btn--square {
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 10px 10px 0;
+  padding: 10px 21px;
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #242424;
+  float: left;
+}
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #ccdbd1;
+}
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #242424;
+  transition: 250ms;
+}

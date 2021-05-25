@@ -1,0 +1,16 @@
+/* just normal css stuff is pretty much magic to me, i add stuff, if it works great if not add and remove stuff, css is = {witch magic} all css, rise !!!! praise css lords. xd*/
+:root {
+  --main: #ffffff;
+}
+.score {
+  display: flex;
+  font-size: 24px;
+  text-emphasis-color: var(--main);
+  align-items: center;
+}
+.score--main {
+  display: flex;
+  font-size: 24px;
+  text-emphasis-color: var(--main);
+  align-items: center;
+}

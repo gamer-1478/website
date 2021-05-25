@@ -1,6 +1,6 @@
 import React from 'react'
 import './gitrepo.css'
-import { Button } from './gitcard'
+import { Button } from '../gitcard/gitcard'
 
 const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { isProfane } from '../../bad-words/badwords'
+import { isProfane } from '../../../bad-words/badwords'
 //import { Button } from '../Button';
-import firebase from '../../firebase'
+import firebase from '../../../firebase'
 import './testimonial.css'
 
 var alldoc = []
@@ -79,9 +79,9 @@ function Testimonials() {
       await Gettestimon();
       alldoc.map((forget) => console.log(forget.name));
       setcondi(true);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     getTok()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [condi])
   return (
     <>

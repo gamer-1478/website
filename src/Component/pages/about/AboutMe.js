@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutMe.css'
-import myimg from '../logo.jpg'
+import myimg from '../../../image/logo.jpg'
 import { Link } from 'react-router-dom';
 
 const openInNewTab = (url) => {

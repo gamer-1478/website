@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Footer.css';
-import { Button } from './Button';
+import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
-import firebase from "../firebase";
+import firebase from "../../firebase";
 import { HashLink } from 'react-router-hash-link';
 
 //import {usePopper} from 'react-popper';
@@ -103,7 +103,7 @@ function Footer() {
             <Link to='about-me'><h2>About Me</h2></Link>
             <Link to='github-repos'>Github Repositories</Link>
             <Link to='/testimonials'>Testimonials</Link>
-            <a href='/LICENSE.txt' target='_blank'>Terms of Service</a>
+            <a href='/TOS.txt' target='_blank'>Terms of Service</a>
           </div>
           <div className='footer-link-items'>
             <HashLink smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} to='/about-me#contact-me'><h2>Contact Me</h2></HashLink>
