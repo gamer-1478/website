@@ -53,6 +53,7 @@ const quizArray = [
     { at_num: "52", mass: "127.6", name: "Tellurium", symbol: "Te" },
     { at_num: "53", mass: "126.904", name: "Iodine", symbol: "I" },
     { at_num: "54", mass: "131.293", name: "Xenon", symbol: "Xe" }];
+
  /*   { at_num: "55", mass: "132.905", name: "Cesium", symbol: "Cs" },
     { at_num: "56", mass: "137.327", name: "Barium", symbol: "Ba" },
     { at_num: "57", mass: "138.905", name: "Lanthanum", symbol: "La" },
@@ -126,13 +127,15 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
+
 function Get_four_options(given, current_at_num) {
     var atNum = [];
     var Options = [];
     var answers = [];
+    var correctAnswerposition = getRandomIntInclusive(1,4);
     for (; atNum.length < 3;) {
         var newRandomNumber = getRandomIntInclusive(1, 30);
-        if (!atNum.includes(newRandomNumber)) {
+        if (!atNum.includes(newRandomNumber) && newRandomNumber!=current_at_num) {
             atNum.push(newRandomNumber);
         }
     }
@@ -148,10 +151,10 @@ function Get_four_options(given, current_at_num) {
             })
         })
         var correct = (quizArray.find(({ at_num }) => at_num === current_at_num.toString()));
-        answers.push({
+        answers.splice(correctAnswerposition,0,({
             answerText: correct.name,
             isCorrect: true
-        })
+        }));
         return (answers);
     }
     else if (given === 2) {
@@ -163,10 +166,10 @@ function Get_four_options(given, current_at_num) {
                 })
             })
             var correct = (quizArray.find(({ at_num }) => at_num === current_at_num.toString()));
-            answers.push({
+            answers.splice(correctAnswerposition,0,({
                 answerText: correct.name,
                 isCorrect: true
-            })
+            }));
             return (answers);
         }
     }
@@ -179,10 +182,10 @@ function Get_four_options(given, current_at_num) {
                 })
             })
             var correct = (quizArray.find(({ at_num }) => at_num === current_at_num.toString()));
-            answers.push({
+            answers.splice(correctAnswerposition,0,({
                 answerText: correct.at_num,
                 isCorrect: true
-            })
+            }));
             return (answers);
         }
     }
@@ -195,10 +198,10 @@ function Get_four_options(given, current_at_num) {
                 })
             })
             var correct = (quizArray.find(({ at_num }) => at_num === current_at_num.toString()));
-            answers.push({
+            answers.splice(correctAnswerposition,0,({
                 answerText: correct.mass,
                 isCorrect: true
-            })
+            }));
             return (answers);
         }
     }
@@ -211,10 +214,10 @@ function Get_four_options(given, current_at_num) {
                 })
             })
             var correct = (quizArray.find(({ at_num }) => at_num === current_at_num.toString()));
-            answers.push({
+            answers.splice(correctAnswerposition,0,({
                 answerText: correct.at_num,
                 isCorrect: true
-            })
+            }));
             return (answers);
         }
     }

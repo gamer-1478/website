@@ -12,14 +12,11 @@ export default function AboutMe() {
     <div>
       <h1 className='aboutme'>ABOUT ME</h1>
       <img className='aboutme-image' width='400px' src={myimg} alt='myImage' />
-      <p className='Text'> Hi i am aayush garg, i am 15 years old and know programming. {'\n'}
-    I didn't learn from any website, but if you ask me i will recommend youtube, {'\n'}
-    don't even try whitehat those people deserve a special place in hell</p>
-      <p className='Text'>I don't sell anything nor promote any good's. i'm not affilated with anyone,
-      i just run an single person organization called openstudyindia which to say the least legally is not even an organization, it doesn't have any trademarks and is not registered anywhere.
-      it has just one goal to gather content and make content detection for indian students easily, we are targeting 5-12 standard students, it will have all the content from 100's of books,
-      and millions of small quizes and make it accessible to all, it will also have management like library inventory management, studnet management reportcard generation, digital notebook's etc.
-        Like a google for indian students of book and study content.</p>
+      <p className='Text'> Hi i am aayush garg, i am 15 years old. <br></br>
+        I can develop a full stack, most projects are homework or for fun<br></br>
+        If you have any idea's for a fun project or a usefull one do contact using email given below</p>
+      <p className='Text'>Can program in python, typescript, javascript, java, php, html and much much more.</p>
+      
       <div className='Icon'>
         <Link
           class='Icon-indi'
