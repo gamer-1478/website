@@ -21,6 +21,29 @@
 .quiz-info h1{
   font-size: 25px;
 }
+.quiz-info p{
+  font-size: 20px;
+}
+.form-heading {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.form{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-input {
+  padding: 8px 24px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border: 1px solid #fff;
+  align-self: center;
+  text-align: center;
+}
+
 .question-section {
   width: 75%;
   position:relative;
@@ -55,7 +78,8 @@ button {
   color: #ffffff;
   background-color: #252d4a;
   border-radius: 15px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
