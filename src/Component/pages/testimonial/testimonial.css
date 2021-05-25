@@ -58,7 +58,7 @@ hr{
 .mybtn{
   display: table-cell;
   vertical-align: middle;
-  background-color: #fdfdfd;
+  background-color: #030303;
   border: 3px solid #0d2574;
   border-radius: 3px;
   padding: 8px 20px;
@@ -68,7 +68,8 @@ hr{
   font-size: 1rem;
 }
 .mybtn:hover{
-  background-color: rgb(103, 170, 73);
+  background-color: rgb(245, 245, 245);
+  color: #000000;
 }
 @media screen and (max-width: 820px) {
   .temoninput {

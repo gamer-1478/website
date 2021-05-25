@@ -124,7 +124,7 @@ function QuizLoad() {
 
           </div>
         </section>
-        <Button onClick={() => handleSumbit()} buttonStyle='btn--main'>Start Quiz</Button>
+        <Button onClick={() => handleSumbit()} buttonStyle='btan--man'>Start Quiz</Button>
         {showError ? (<p style={{ color: 'red' }}>{Error}</p>) : (<p></p>)}
       </div>
     )
@@ -154,7 +154,7 @@ function QuizLoad() {
             {wascorrect ? (
               <div className='answer-section'>
                 {/*using button libary created by me, see button.js*/}
-                <Button disable={true} bgcolor='#2f922f' buttonStyle='btn--square'>{questions[currentQuestion][0].answerOptions[selectopt].answerText}</Button>
+                <Button disable={true} bgcolor='#2f922f' buttonStyle='btan--square'>{questions[currentQuestion][0].answerOptions[selectopt].answerText}</Button>
               </div>
             ) : (
               <>
@@ -167,8 +167,8 @@ function QuizLoad() {
                     //the user selected option is displayed in red 
                     //and correct option is displayed in green.
                     using button page created by me..*/}
-                  <Button disable={true} buttonStyle='btn--square' bgcolor='#ff3333' > {questions[currentQuestion][0].answerOptions[selectopt].answerText}</Button>
-                  <Button disable={true} buttonStyle='btn--square' bgcolor='#2f922f' > {correctOption[0].answerText}</Button>
+                  <Button disable={true} buttonStyle='btan--square' bgcolor='#ff3333' > {questions[currentQuestion][0].answerOptions[selectopt].answerText}</Button>
+                  <Button disable={true} buttonStyle='btan--square' bgcolor='#2f922f' > {correctOption[0].answerText}</Button>
                 </div>
               </>
             )}
@@ -200,7 +200,7 @@ function QuizLoad() {
               <div className='answer-section'>
                 {/*using button libary created by me, see button.js*/}
                 {questions[currentQuestion][0].answerOptions.map((answerOption, index) => (
-                  <Button buttonStyle='btn--square' buttonSize='btn--medium' onClick={() => handleAnswerOptionClick(answerOption.isCorrect, index)}>{answerOption.answerText}</Button>
+                  <Button buttonStyle='btan--square' buttonSize='btan--mediu' onClick={() => handleAnswerOptionClick(answerOption.isCorrect, index)}>{answerOption.answerText}</Button>
                 ))}
               </div>
             </>

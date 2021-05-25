@@ -3,7 +3,7 @@
   --main: #fff;
 }
 
-.btn {
+.btan {
   padding: 8px 20px;
   border-radius: 2px;
   outline: none;
@@ -11,20 +11,20 @@
   cursor: pointer;
 }
 
-.btn--main {
+.btan--man {
   background-color: var(--main);
   color: #242424;
   border: 1px solid var(--main);
 }
 
-.btn--silhouette {
+.btan--s {
   background-color: transparent;
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--main);
   transition: all 0.3s ease-out;
 }
-.btn--square {
+.btan--square {
   border-radius: 20px;
   display: block;
   text-align: center;
@@ -40,21 +40,21 @@
   background-color: #242424;
   float: left;
 }
-.btn--medium {
+.btan--mediu {
   padding: 8px 20px;
   font-size: 18px;
 }
 
-.btn--large {
+.btan--larg {
   padding: 12px 26px;
   font-size: 20px;
 }
 
-button:hover {
+.btan button:hover {
   background-color: #ccdbd1;
 }
-.btn--large:hover,
-.btn--medium:hover {
+.btan--larg:hover,
+.btan--mediu:hover {
   transition: all 0.3s ease-out;
   background: #fff;
   color: #242424;
