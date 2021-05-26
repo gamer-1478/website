@@ -82,7 +82,6 @@ function QuizLoad() {
     if (event.code === "Enter") {
       if (name.length > 2) {
         setinfoscreen(false);
-        console.log('triggered1')
       }
       else {
         SetshowError(true);
@@ -190,7 +189,7 @@ function QuizLoad() {
     }
     //oh my god i'm getting away with this shit amn't i?? huhuhuh
     else {
-      if (showScore == true) {
+      if (showScore === true) {
         upload_score_name();
       }
       return (
