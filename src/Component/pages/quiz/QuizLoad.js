@@ -1,19 +1,10 @@
-//import app.css and common react libraries.
-//app.css contains css headers refernced by this application in its current form.
-import React, { useState } from 'react';
-import './quizload.css';
-import { Button } from './Button/Button-quiz';
-
-//import questions.json file and load it in the variable questions,
-//please note this will be done by question.js which will load and parse the json from an api 
-//code may be available in question.js.
-import { questjson } from './generatequiz';
+import React, { useState } from 'react';//import common react libraries
+import './quizload.css';//import css
+import { Button } from './Button/Button-quiz';//import custom buttons
+import { questjson } from './generatequiz';//import questions array randomly generated from a generatequiz.js
 import { ShowmyScore } from './ShowScore'; //imports show score, used to display score working on it.
-import firebase from 'firebase';
-var questions = questjson;
-
-var getinfoscreen = true;
-
+import firebase from 'firebase';//import firebase
+var questions = questjson; //to access the questions array renaming it.
 
 //this is the normal function exported.
 function QuizLoad() {
@@ -29,7 +20,7 @@ function QuizLoad() {
   const [rerender, ReRenderwithcolor] = useState(false); //this is used to go the second screen where correct options are shown.
   const [selectopt, Selectopt] = useState(0); //this variable holds your selected option
   const [wascorrect, Wascorrect] = useState(false); //this variable holds if your chosen option is correct or not.
-
+  const [getinfoscreen, setinfoscreen] = useState(true);
   const [name, setname] = useState('');
   const [showError, SetshowError] = useState(false);
   const [Error, SetError] = useState('');
@@ -56,11 +47,13 @@ function QuizLoad() {
     correctOption.push(questions[currentQuestion][0].answerOptions.find(({ isCorrect }) => isCorrect === true))
   }
 
+  //handle's name input, saves it
   const nameInputHandler = (e) => {
     SetshowError(false);
     setname(e.target.value);
   };
 
+  //handle's score upload to a firebase server with name
   async function upload_score_name() {
     const name_score_store = firebase.firestore().collection('quiz');
 
@@ -70,15 +63,33 @@ function QuizLoad() {
       'time': new Date().toLocaleTimeString() +" --- " +new Date().toDateString()
     })
   };
+
+  //handle's button click, checks if name length is greater than 2, if so changes screen.
+  //if not show's error 'please enter a name'
   function handleSumbit() {
     if (name.length > 2) {
-      getinfoscreen = false;
+      setinfoscreen(false);
     }
     else {
       SetshowError(true);
       SetError('Please Enter a name')
     }
-  }
+  };
+
+  //handle's sumbit when enter is pressed.
+  function keyPressed(event) {
+    
+    if (event.code === "Enter") {
+      if (name.length > 2) {
+        setinfoscreen(false);
+      }
+      else {
+        SetshowError(true);
+        SetError('Please Enter a name')
+      }
+    }
+  };
+  
   //function to handle answer click, it takes two variable's 
   //first check's if the selected option iscorrect or not. 
   //optionselect gets the selected option. 
@@ -101,7 +112,10 @@ function QuizLoad() {
     //after all dumb things have happened, it triggers the rerender with color so that correct option is displayed. which is so dumb, but works.
     ReRenderwithcolor(true);
   };
+
+  //changes between info screen and the actual quiz
   if (getinfoscreen === true) {
+    //shows a info screen to get name and shows some data
     return (
       <div className='quiz-info'>
         <h1>The Quiz has ten periodic table related questions generated randomly. Have fun!</h1>
@@ -111,17 +125,14 @@ function QuizLoad() {
             Please Enter Your Name To Start The Quiz
           </p>
           <div className='input-areas'>
-            <form>
               <input
                 className='form-input'
-                name='name'
                 type='text'
+                id="one"
                 placeholder='Your Name'
-                id='nametext'
+                onKeyPress={keyPressed}
                 onChange={nameInputHandler}
               />
-            </form>
-
           </div>
         </section>
         <Button onClick={() => handleSumbit()} buttonStyle='btan--man'>Start Quiz</Button>
@@ -178,7 +189,7 @@ function QuizLoad() {
     }
     //oh my god i'm getting away with this shit amn't i?? huhuhuh
     else {
-      if (showScore == true) {
+      if (showScore === true) {
         upload_score_name();
       }
       return (
@@ -211,4 +222,5 @@ function QuizLoad() {
   }
 }
 
+//exports quiz
 export default QuizLoad;
