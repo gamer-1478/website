@@ -1,3 +1,4 @@
+//data array
 const quizArray = [
     { at_num: "1", mass: "1.0079", name: "Hydrogen", symbol: "H" },
     { at_num: "2", mass: "4.0026", name: "Helium", symbol: "He" },
@@ -53,7 +54,7 @@ const quizArray = [
     { at_num: "52", mass: "127.6", name: "Tellurium", symbol: "Te" },
     { at_num: "53", mass: "126.904", name: "Iodine", symbol: "I" },
     { at_num: "54", mass: "131.293", name: "Xenon", symbol: "Xe" }];
-
+//redundant data, ready to be added, didn't add cause no one learns so much
  /*   { at_num: "55", mass: "132.905", name: "Cesium", symbol: "Cs" },
     { at_num: "56", mass: "137.327", name: "Barium", symbol: "Ba" },
     { at_num: "57", mass: "138.905", name: "Lanthanum", symbol: "La" },
@@ -120,21 +121,25 @@ const quizArray = [
     { at_num: "118", mass: "294", name: "Ununoctium", symbol: "Uuo" }
 ];*/
 
+// a few variable's
 var serveQuestions = [];
 var displayQuestions = [];
+
+//a random number generator with inclusive numbers on both end
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }
 
+//generates 3 randm answers and randomly adds the correct answer in between
 function Get_four_options(given, current_at_num) {
     var atNum = [];
     var Options = [];
     var answers = [];
     var correctAnswerposition = getRandomIntInclusive(1,4);
     for (; atNum.length < 3;) {
-        var newRandomNumber = getRandomIntInclusive(1, 30);
+        var newRandomNumber = getRandomIntInclusive(1, quizArray.length);
         if (!atNum.includes(newRandomNumber) && newRandomNumber!=current_at_num) {
             atNum.push(newRandomNumber);
         }
@@ -225,8 +230,9 @@ function Get_four_options(given, current_at_num) {
 }
 function getRandomQuestions() {
     var atNum = [];
+    //gets 10 random questions
     for (; atNum.length < 10;) {
-        var newRandomNumber = getRandomIntInclusive(1, 30);
+        var newRandomNumber = getRandomIntInclusive(1, quizArray.length);
         if (!atNum.includes(newRandomNumber)) {
             atNum.push(newRandomNumber);
         }
@@ -238,6 +244,7 @@ function getRandomQuestions() {
     serveQuestions.map((details) => {
         var type = getRandomIntInclusive(1, 5);
         var quesblock = [];
+        //5 types of questions, that can be generated based on a random number generator
         if (type === 1) {
             var ques = "what is the name of the element with atomic number " + details.at_num.toString();
             var answerOptions = Get_four_options(type, details.at_num);
