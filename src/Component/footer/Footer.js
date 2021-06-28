@@ -9,7 +9,7 @@ import { HashLink } from 'react-router-hash-link';
 const discord = "https://discord.com/users/823237564130525184";
 const instagram = "https://www.instagram.com/aayushgarg.official";
 const youtube = "https://www.google.com/search?q=not+on+youtube"
-const twitter = "https://twitter.com/AayushG_offcl";
+const twitter = "https://twitter.com/aysg_ays";
 const linkedin = "https://www.google.com/search?q=not+on+linkedin";
 const Facebook = "https://www.google.com/search?q=not+on+facebook";
 

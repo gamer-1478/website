@@ -44,7 +44,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://twitter.com/AayushG_offcl") }}
+          onClick={() => { openInNewTab("https://twitter.com/aysg_ays") }}
           aria-label='Twitter'
           style={{ color: '#000000' }}
         >
