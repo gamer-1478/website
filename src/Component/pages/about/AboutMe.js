@@ -3,6 +3,14 @@ import './AboutMe.css'
 import myimg from '../../../image/logo.jpg'
 import { Link } from 'react-router-dom';
 
+
+const Twitter = "https://twitter.com/aysg_ays";
+const Discord = "https://discord.com/users/823237564130525184";
+const Instagram = "https://www.instagram.com/aayushgarg.official";
+const LinkedIn = "https://www.linkedin.com/in/aayush-garg-585b6718b/";
+const Youtube = "https://www.google.com/search?q=not+on+youtube";
+const Facebook = "https://www.google.com/search?q=not+on+facebook";
+
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
@@ -16,11 +24,11 @@ export default function AboutMe() {
         I can develop a full stack, most projects are homework or for fun<br></br>
         If you have any idea's for a fun project or a usefull one do contact using email given below</p>
       <p className='Text'>Can program in python, typescript, javascript, java, php, html and much much more.</p>
-      
+
       <div className='Icon'>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+facebook") }}
+          onClick={() => { openInNewTab(Facebook) }}
           aria-label='Facebook'
           style={{ color: '#000000' }}
         >
@@ -28,7 +36,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://www.instagram.com/aayushgarg.official") }}
+          onClick={() => { openInNewTab(Instagram) }}
           aria-label='Instagram'
           style={{ color: '#000000' }}
         >
@@ -36,15 +44,17 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+youtube") }}
+          onClick={() => { openInNewTab(Youtube) }}
           aria-label='Youtube'
           style={{ color: '#000000' }}
         >
           <i class='fab fa-youtube fa-5x' />
         </Link>
+      </div>
+      <div className='Icon'>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://twitter.com/aysg_ays") }}
+          onClick={() => { openInNewTab(Twitter) }}
           aria-label='Twitter'
           style={{ color: '#000000' }}
         >
@@ -52,7 +62,7 @@ export default function AboutMe() {
         </Link>
         <Link
           class='Icon-indi'
-          onClick={() => { openInNewTab("https://www.google.com/search?q=not+on+linkedin") }}
+          onClick={() => { openInNewTab(LinkedIn) }}
           aria-label='LinkedIn'
           style={{ color: '#000000' }}
         >
@@ -60,7 +70,7 @@ export default function AboutMe() {
         </Link>
         <Link
           className='Icon-indi'
-          onClick={() => { openInNewTab("https://discord.com/users/823237564130525184") }}
+          onClick={() => { openInNewTab(Discord) }}
           aria-label='discord'
           style={{ color: '#000000' }}
         >
@@ -71,7 +81,7 @@ export default function AboutMe() {
       <div className='aboutme' id='contact-me'>
         <hr />
         <h1 className='aboutme'>CONTACT ME</h1>
-        <p className='Textp'> contact me on email:- argtech.1234@gmail.com </p>
+        <p className='Textp'> contact me on email:- [contact][@][aayushgarg][.net] </p>
       </div>
     </div>
   )

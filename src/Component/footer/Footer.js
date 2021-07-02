@@ -13,8 +13,8 @@ const twitter = "https://twitter.com/aysg_ays";
 const linkedin = "https://www.google.com/search?q=not+on+linkedin";
 const Facebook = "https://www.google.com/search?q=not+on+facebook";
 
-const currentDate = new Date();
-const timestamp = currentDate.getTime();
+const currentDate = new Date().toLocaleTimeString() +" " +new Date().toDateString();
+const timestamp = currentDate;
 
 firebase.firestore().collection('site-visits').add({
   time: timestamp,

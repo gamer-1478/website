@@ -14,14 +14,14 @@ import QuizLoad from './Component/pages/quiz/QuizLoad';
 
 function Aihome() {
   return (
-      <>
+      <div>
       {window.location.href = "https://sway.office.com/92QqdnEbHCOkIfjA?ref=Link"}
-      </>
+      </div>
   )
 }
 function App() {
   return (
-    <>
+    <div>
       <Router>
         <NavigationBar />
         <Switch>
@@ -37,7 +37,7 @@ function App() {
         </Switch>
         <Footer/>
       </Router>
-    </>
+    </div>
   );
 }
 export default App;
