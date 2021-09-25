@@ -58,11 +58,6 @@ function NavigationBar() {
                                 Github Repositories
                         </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to='/testimonials' className='nav-links' onClick={closeMobileMenu}>
-                                Testimonials
-                        </Link>
-                        </li>
                         <li>
                             <HashLink to='/about-me#contact-me' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} className='nav-links-mobile' onClick={closeMobileMenu}>
                                 Contant me
