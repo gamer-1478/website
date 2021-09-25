@@ -20,10 +20,11 @@ export default function AboutMe() {
     <div>
       <h1 className='aboutme'>ABOUT ME</h1>
       <img className='aboutme-image' width='400px' src={myimg} alt='myImage' />
-      <p className='Text'> Hi i am aayush garg, i am 15 years old. <br></br>
+      <p className='Text'> Hi i am aayush garg, and i am a High School Student. <br></br>
         I can develop a full stack, most projects are homework or for fun<br></br>
         If you have any idea's for a fun project or a usefull one do contact using email given below</p>
-      <p className='Text'>Can program in python, typescript, javascript, java, php, html and much much more.</p>
+      <p className='Text'>Can program in python, typescript, javascript, java, php, html and many more.
+      </p>
 
       <div className='Icon'>
         <Link

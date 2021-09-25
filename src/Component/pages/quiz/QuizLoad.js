@@ -3,7 +3,7 @@ import './quizload.css';//import css
 import { Button } from './Button/Button-quiz';//import custom buttons
 import { questjson } from './generatequiz';//import questions array randomly generated from a generatequiz.js
 import { ShowmyScore } from './ShowScore'; //imports show score, used to display score working on it.
-import firebase from 'firebase';//import firebase
+import firebase from '../../../firebase';//import firebase
 var questions = questjson; //to access the questions array renaming it.
 
 //this is the normal function exported.
