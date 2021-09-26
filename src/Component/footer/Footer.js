@@ -99,7 +99,7 @@ function Footer() {
           </>)}
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <Link to='about-me'><h2>About Me</h2></Link>
             <Link to='github-repos'>Github Repositories</Link>
             <Link to='/testimonials'>Testimonials</Link>

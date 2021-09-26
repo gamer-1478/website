@@ -22,7 +22,7 @@ export const Button = ({
     const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
     return (
-        <HashLink to={path} className='btn-mobile' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -offset) }}>
+        <HashLink to={path||''} className='btn-mobile' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -offset) }}>
             <button
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}

@@ -30,7 +30,7 @@ export const Button = ({
 
     return (
         //using hashlink here because it does work as a normal link router and a hash link router plus has extra stuff like scrolling, so it is better for this usecase.
-        <HashLink to={path} className='btan-mobi' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -offset) }}>
+        <HashLink to={path||''} className='btan-mobi' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -offset) }}>
             <button
                 className={`btan ${checkButtonStyle} ${checkButtonSize}`}//sets the classname
                 style={{ backgroundColor: bgcolor }}//sets the style

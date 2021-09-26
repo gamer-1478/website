@@ -28,46 +28,46 @@ export default function AboutMe() {
 
       <div className='Icon'>
         <Link
-          class='Icon-indi'
+          className='Icon-indi'
           onClick={() => { openInNewTab(Facebook) }}
           aria-label='Facebook'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-facebook fa-5x' />
+          <i className='fab fa-facebook fa-5x' />
         </Link>
         <Link
-          class='Icon-indi'
+          className='Icon-indi'
           onClick={() => { openInNewTab(Instagram) }}
           aria-label='Instagram'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-instagram fa-5x' />
+          <i className='fab fa-instagram fa-5x' />
         </Link>
         <Link
-          class='Icon-indi'
+          className='Icon-indi'
           onClick={() => { openInNewTab(Youtube) }}
           aria-label='Youtube'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-youtube fa-5x' />
+          <i className='fab fa-youtube fa-5x' />
         </Link>
       </div>
       <div className='Icon'>
         <Link
-          class='Icon-indi'
+          className='Icon-indi'
           onClick={() => { openInNewTab(Twitter) }}
           aria-label='Twitter'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-twitter fa-5x' />
+          <i className='fab fa-twitter fa-5x' />
         </Link>
         <Link
-          class='Icon-indi'
+          className='Icon-indi'
           onClick={() => { openInNewTab(LinkedIn) }}
           aria-label='LinkedIn'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-linkedin fa-5x' />
+          <i className='fab fa-linkedin fa-5x' />
         </Link>
         <Link
           className='Icon-indi'
@@ -75,7 +75,7 @@ export default function AboutMe() {
           aria-label='discord'
           style={{ color: '#000000' }}
         >
-          <i class='fab fa-discord fa-5x' />
+          <i className='fab fa-discord fa-5x' />
         </Link>
       </div>
 
