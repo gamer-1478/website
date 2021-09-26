@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 
 //import {usePopper} from 'react-popper';
 const discord = "https://discord.com/users/823237564130525184";
@@ -19,32 +18,6 @@ const openInNewTab = (url) => {
 function Footer() {
   return (
     <div className='footer-container'>
-      <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <Link to='about-me'><h2>About Me</h2></Link>
-            <Link to='github-repos'>Github Repositories</Link>
-            <Link to='/testimonials'>Testimonials</Link>
-            <a href='/TOS.txt' target='_blank'>Terms of Service</a>
-          </div>
-          <div className='footer-link-items'>
-            <HashLink smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} to='/about-me#contact-me'><h2>Contact Me</h2></HashLink>
-            <HashLink to='/about-me#contact-me' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }}>Contact</HashLink>
-            <HashLink to='/about-me#contact-me' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }}>Support</HashLink>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <p onClick={() => { openInNewTab(instagram) }}>Instagram</p>
-            <p onClick={() => { openInNewTab(Facebook) }}>Facebook</p>
-            <p onClick={() => { openInNewTab(youtube) }}>Youtube</p>
-            <p onClick={() => { openInNewTab(twitter) }}>Twitter</p>
-            <p onClick={() => { openInNewTab(discord) }}>Discord</p>
-            <p onClick={() => { openInNewTab(linkedin) }}>LinkedIn</p>
-          </div>
-        </div>
-      </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
@@ -94,7 +67,6 @@ function Footer() {
             >
               <i className='fab fa-discord' />
             </p>
-
           </div>
         </div>
       </section>
