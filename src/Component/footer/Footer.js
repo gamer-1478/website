@@ -13,7 +13,7 @@ const twitter = "https://twitter.com/aysg_ays";
 const linkedin = "https://www.google.com/search?q=not+on+linkedin";
 const Facebook = "https://www.google.com/search?q=not+on+facebook";
 
-const currentDate = new Date().toLocaleTimeString() +" " +new Date().toDateString();
+const currentDate = new Date().toLocaleTimeString() + " " + new Date().toDateString();
 const timestamp = currentDate;
 
 firebase.firestore().collection('site-visits').add({
@@ -43,7 +43,7 @@ function Footer() {
     SetError('')
     const emailread = firebase.firestore().collection('email-subscriber');
     const snaapshot = await emailread.where('email', '==', email).get();
-    
+
     if (snaapshot.empty) {
       if (regex.test(email)) {
         emailread.add({
@@ -68,35 +68,35 @@ function Footer() {
         <section className='footer-subscription'>
           <p className='footer-subscription-heading'>
             Thanks you for registering
-      </p>
+          </p>
           <p className='footer-subscription-text'>
             You will now start to recieve the emails at {email} in 24 hours.
-        </p>
+          </p>
         </section>) : (
-          <>
-            <section className='footer-subscription'>
-              <p className='footer-subscription-heading'>
-                Join the newsletter to receive info on my projects
-        </p>
-              <p className='footer-subscription-text'>
-                You can unsubscribe at any time.
-        </p>
-              <div className='input-areas'>
-                <form>
-                  <input
-                    className='footer-input'
-                    name='email'
-                    type='email'
-                    placeholder='Your Email'
-                    id='emailtext'
-                    onChange={emailInputHandler}
-                  />
-                  <Button onClick={handleSubmit} buttonStyle='btn--outline'>Subscribe</Button>
-                </form>
-                {DisplayError ? (<p style={{ color: '#f44a1f' }}>{Error}</p>) : (<></>)}
-              </div>
-            </section>
-          </>)}
+        <>
+          <section className='footer-subscription'>
+            <p className='footer-subscription-heading'>
+              Join the newsletter to receive info on my projects
+            </p>
+            <p className='footer-subscription-text'>
+              You can unsubscribe at any time.
+            </p>
+            <div className='input-areas'>
+              <form>
+                <input
+                  className='footer-input'
+                  name='email'
+                  type='email'
+                  placeholder='Your Email'
+                  id='emailtext'
+                  onChange={emailInputHandler}
+                />
+                <Button onClick={handleSubmit} buttonStyle='btn--outline'>Subscribe</Button>
+              </form>
+              {DisplayError ? (<p style={{ color: '#f44a1f' }}>{Error}</p>) : (<></>)}
+            </div>
+          </section>
+        </>)}
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -114,12 +114,12 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='' onClick={() => { openInNewTab(instagram) }}>Instagram</Link>
-            <Link onClick={() => { openInNewTab(Facebook) }}>Facebook</Link>
-            <Link onClick={() => { openInNewTab(youtube) }}>Youtube</Link>
-            <Link onClick={() => { openInNewTab(twitter) }}>Twitter</Link>
-            <Link onClick={() => { openInNewTab(discord) }}>Discord</Link>
-            <Link onClick={() => { openInNewTab(linkedin) }}>LinkedIn</Link>
+            <p onClick={() => { openInNewTab(instagram) }}>Instagram</p>
+            <p onClick={() => { openInNewTab(Facebook) }}>Facebook</p>
+            <p onClick={() => { openInNewTab(youtube) }}>Youtube</p>
+            <p onClick={() => { openInNewTab(twitter) }}>Twitter</p>
+            <p onClick={() => { openInNewTab(discord) }}>Discord</p>
+            <p onClick={() => { openInNewTab(linkedin) }}>LinkedIn</p>
           </div>
         </div>
       </div>
@@ -132,48 +132,46 @@ function Footer() {
           </div>
           <small className='website-rights'>Aayush Garg © 2020</small>
           <div className='social-icons'>
-            <Link
+            <p
               className='social-icon-link facebook'
               onClick={() => { openInNewTab(Facebook) }}
               aria-label='Facebook'
             >
               <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
+            </p>
+            <p
               className='social-icon-link instagram'
               onClick={() => { openInNewTab(instagram) }}
-              aria-label='Instagram'
-            >
+              aria-label='Instagram'>
               <i className='fab fa-instagram' />
-            </Link>
-            <Link
+            </p>
+            <p
               className='social-icon-link youtube'
               onClick={() => { openInNewTab(youtube) }}
-              aria-label='Youtube'
-            >
+              aria-label='Youtube'>
               <i className='fab fa-youtube' />
-            </Link>
-            <Link
+            </p>
+            <p
               className='social-icon-link twitter'
               onClick={() => { openInNewTab(twitter) }}
               aria-label='Twitter'
             >
               <i className='fab fa-twitter' />
-            </Link>
-            <Link
+            </p>
+            <p
               className='social-icon-link linkedin'
               onClick={() => { openInNewTab(linkedin) }}
               aria-label='LinkedIn'
             >
               <i className='fab fa-linkedin' />
-            </Link>
-            <Link
+            </p>
+            <p
               className='social-icon-link discord'
               onClick={() => { openInNewTab(discord) }}
               aria-label='discord'
             >
               <i className='fab fa-discord' />
-            </Link>
+            </p>
           </div>
         </div>
       </section>

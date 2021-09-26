@@ -8,7 +8,7 @@ import CyborticsHumanoids from './Component/pages/cybortics/CyborticsHumanoid'
 import AboutMe from './Component/pages/about/AboutMe'
 import Footer from './Component/footer/Footer'
 import fourzerofour from "./Component/404/404";
-import Dsm from './Component/pages/dsm/dsm'
+//import Dsm from './Component/pages/dsm/dsm'
 import QuizLoad from './Component/pages/quiz/QuizLoad';
 
 function Aihome() {
@@ -30,7 +30,7 @@ function App() {
           <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids} />
           <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
           {/* <Route path={process.env.PUBLIC_URL + '/testimonials'} exact component={Testimonials } /> */}
-          <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={Dsm} />
+          {/* <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={Dsm} /> */}
           <Route path={process.env.PUBLIC_URL + '/quiz-science-hhw'} exact component={QuizLoad}/>
           <Route path="*" exact component={fourzerofour} />
         </Switch>

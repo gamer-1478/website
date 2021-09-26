@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import './dsm.css'
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition
+const SpeechRecognition = window.webkitSpeechRecognition || window.speechRecognition;
 const mic = new SpeechRecognition()
 
 mic.continuous = true
