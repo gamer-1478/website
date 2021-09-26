@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../button/Button';
 
 import './NavigationBar.css'
-import { HashLink } from 'react-router-hash-link';
+import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 function NavigationBar() {
     const [click, setClick] = useState(false);
@@ -32,36 +32,30 @@ function NavigationBar() {
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                         Aayush Garg
-                </Link>
+                    </Link>
 
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
+
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <HashLink smooth='true' to='/#home' className='nav-links' onClick={closeMobileMenu}>
+                            <NavHashLink smooth
+                                to='/#home' className='nav-links' scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} onClick={() => { closeMobileMenu() }}>
                                 Home
-                        </HashLink>
+                            </NavHashLink>
                         </li >
                         <li className='nav-item'>
-                            <HashLink smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} to='/#projects' className='nav-links' onClick={closeMobileMenu}>
+                            <NavHashLink smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }}
+                                to='/#projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
-                        </HashLink>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/about-me' className='nav-links' onClick={closeMobileMenu}>
-                                About me
-                        </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to='/github-repos' className='nav-links' onClick={closeMobileMenu}>
-                                Github Repositories
-                        </Link>
+                            </NavHashLink>
                         </li>
                         <li>
-                            <HashLink to='/about-me#contact-me' smooth scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -80) }} className='nav-links-mobile' onClick={closeMobileMenu}>
+                            <HashLink to='/about-me#contact-me'
+                                className='nav-links-mobile' onClick={closeMobileMenu}>
                                 Contant me
-                        </HashLink>
+                            </HashLink>
                         </li>
                     </ul>
                     {button && <Button buttonStyle='btn--outline' offset='80' path='/about-me#contact-me'>Contact Me</Button>}

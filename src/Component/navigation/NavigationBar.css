@@ -21,7 +21,6 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -36,7 +35,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -79,8 +78,8 @@
   .NavbarItems {
     position: relative;
   }
-
   .nav-menu {
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -91,35 +90,29 @@
     opacity: 1;
     transition: all 0.5s ease;
   }
-
   .nav-menu.active {
     background: #242222;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
   }
-
   .nav-links {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
   }
-
   .nav-links:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
   }
-
   .navbar-logo {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(25%, 50%);
   }
-
   .menu-icon {
     display: block;
     position: absolute;
@@ -129,12 +122,10 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
-
   .fa-times {
     color: #fff;
     font-size: 2rem;
   }
-
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -149,7 +140,6 @@
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
   }
-
   .nav-links-mobile:hover {
     background: #fff;
     color: #242424;

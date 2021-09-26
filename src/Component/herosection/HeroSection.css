@@ -1,73 +1,116 @@
-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-}
-
 .hero-container {
-  background: url("../../image/img-home.jpg") center center/cover no-repeat;
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  background-color: #111;
 }
 
-.hero-container > h1 {
+.hero-container>h1 {
   color: #fff;
-  font-size: 100px;
-  margin-top: -100px;
+  font-size: 3vw;
 }
 
-.hero-container > p {
+.hero-container>p {
   margin-top: 8px;
+  line-height: 2vw;
   color: #fff;
   text-align: center;
   vertical-align: middle;
-  font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-size: 1vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.hero-btns {
-  margin-top: 32px;
+.aboutme {
+  display: block;
+  height: auto;
+  line-height: 90px;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-btns .btn {
-  margin: 6px;
+p {
+  line-height: 3vw;
 }
 
-.fa-play-circle {
-  margin-left: 4px;
+.aboutme-image {
+  display: block;
+  height: 300px;
+  width: 300px;
+  line-height: 90px;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  border: 10px solid #000000;
+}
+
+.Text {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.social-icon-link-about {
+  color: #fff;
+  font-size: 24px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.social-icons-about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+hr {
+  border: 10px solid black;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
+  .aboutme-image {
+    height: 300px;
+    width: 300px;
+  }
+  .hero-container>h1 {
+    font-size: 6vw;
+  }
+  .hero-container>p {
+    font-size: 3vw;
+    line-height: 3vw;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
-    font-size: 50px;
-    margin-top: -100px;
+  .hero-container>h1 {
+    font-size: 10vw;
   }
-
-  .hero-container > p {
-    font-size: 30px;
+  .hero-container>p {
+    font-size: 5vw;
   }
-
   .btn-mobile {
     display: block;
     text-decoration: none;
   }
-
   .btn {
     width: 100%;
   }
