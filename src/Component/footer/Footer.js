@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Footer.css';
-import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
-import firebase from "../../firebase";
 import { HashLink } from 'react-router-hash-link';
 
 //import {usePopper} from 'react-popper';
@@ -13,90 +11,14 @@ const twitter = "https://twitter.com/aysg_ays";
 const linkedin = "https://www.google.com/search?q=not+on+linkedin";
 const Facebook = "https://www.google.com/search?q=not+on+facebook";
 
-const currentDate = new Date().toLocaleTimeString() + " " + new Date().toDateString();
-const timestamp = currentDate;
-
-firebase.firestore().collection('site-visits').add({
-  time: timestamp,
-  date: currentDate
-})
-
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
 }
 
 function Footer() {
-  var regex = /^(.+)@(.+)$/;
-  const [email, setemail] = useState('')
-  const [successem, Setsuccessem] = useState(false)
-  const [Error, SetError] = useState('')
-  const [DisplayError, SetDisplayError] = useState(false)
-
-  const emailInputHandler = (e) => {
-    SetDisplayError(false);
-    SetError('')
-    setemail(e.target.value);
-  };
-  async function handleSubmit() {
-    SetDisplayError(false)
-    SetError('')
-    const emailread = firebase.firestore().collection('email-subscriber');
-    const snaapshot = await emailread.where('email', '==', email).get();
-
-    if (snaapshot.empty) {
-      if (regex.test(email)) {
-        emailread.add({
-          'email': email
-        })
-        Setsuccessem(true)
-      }
-      else {
-        SetDisplayError(true)
-        SetError('Email is not vaild mate, please check email!!')
-      }
-    }
-    else {
-      SetDisplayError(true)
-      SetError('Email is already registered Mate, you are already getting messages!!')
-    }
-  };
-
   return (
     <div className='footer-container'>
-      {successem ? (
-        <section className='footer-subscription'>
-          <p className='footer-subscription-heading'>
-            Thanks you for registering
-          </p>
-          <p className='footer-subscription-text'>
-            You will now start to recieve the emails at {email} in 24 hours.
-          </p>
-        </section>) : (
-        <>
-          <section className='footer-subscription'>
-            <p className='footer-subscription-heading'>
-              Join the newsletter to receive info on my projects
-            </p>
-            <p className='footer-subscription-text'>
-              You can unsubscribe at any time.
-            </p>
-            <div className='input-areas'>
-              <form>
-                <input
-                  className='footer-input'
-                  name='email'
-                  type='email'
-                  placeholder='Your Email'
-                  id='emailtext'
-                  onChange={emailInputHandler}
-                />
-                <Button onClick={handleSubmit} buttonStyle='btn--outline'>Subscribe</Button>
-              </form>
-              {DisplayError ? (<p style={{ color: '#f44a1f' }}>{Error}</p>) : (<></>)}
-            </div>
-          </section>
-        </>)}
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -172,6 +94,7 @@ function Footer() {
             >
               <i className='fab fa-discord' />
             </p>
+
           </div>
         </div>
       </section>

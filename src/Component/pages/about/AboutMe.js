@@ -1,15 +1,14 @@
 import React from 'react'
 import './AboutMe.css'
 import myimg from '../../../image/logo.jpg'
-import { Link } from 'react-router-dom';
 
-
-const Twitter = "https://twitter.com/aysg_ays";
-const Discord = "https://discord.com/users/823237564130525184";
-const Instagram = "https://www.instagram.com/aayushgarg.official";
-const LinkedIn = "https://www.linkedin.com/in/aayush-garg-585b6718b/";
-const Youtube = "https://www.google.com/search?q=not+on+youtube";
+const discord = "https://discord.com/users/823237564130525184";
+const instagram = "https://www.instagram.com/aayushgarg.official";
+const youtube = "https://www.google.com/search?q=not+on+youtube"
+const twitter = "https://twitter.com/aysg_ays";
+const linkedin = "https://www.google.com/search?q=not+on+linkedin";
 const Facebook = "https://www.google.com/search?q=not+on+facebook";
+const github = ''
 
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -25,64 +24,61 @@ export default function AboutMe() {
         If you have any idea's for a fun project or a usefull one do contact using email given below</p>
       <p className='Text'>Can program in python, typescript, javascript, java, php, html and many more.
       </p>
+      <div className='socialIcons'>
+        <div className='social-icons-about-me'>
+          <p
+            className='social-icon-link-about facebook'
+            onClick={() => { openInNewTab(Facebook) }}
+            aria-label='Facebook'>
+            <i className='fab fa-facebook-f fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about instagram'
+            onClick={() => { openInNewTab(instagram) }}
+            aria-label='Instagram'>
+            <i className='fab fa-instagram fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about youtube'
+            onClick={() => { openInNewTab(youtube) }}
+            aria-label='Youtube'>
+            <i className='fab fa-youtube fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about twitter'
+            onClick={() => { openInNewTab(twitter) }}
+            aria-label='Twitter'
+          >
+            <i className='fab fa-twitter fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about linkedin'
+            onClick={() => { openInNewTab(linkedin) }}
+            aria-label='LinkedIn'
+          >
+            <i className='fab fa-linkedin fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about discord'
+            onClick={() => { openInNewTab(discord) }}
+            aria-label='discord'
+          >
+            <i className='fab fa-discord fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about github'
+            onClick={() => { openInNewTab(github) }}
+            aria-label='github'>
+            <i className='fab fa-github fa-lg' />
+          </p>
+          <p
+            className='social-icon-link-about email'
+            onClick={() => { openInNewTab(github) }}
+            aria-label='email'>
+            <i className='fas fa-envelope fa-lg' />
+          </p>
 
-      <div className='Icon'>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(Facebook) }}
-          aria-label='Facebook'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-facebook fa-5x' />
-        </Link>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(Instagram) }}
-          aria-label='Instagram'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-instagram fa-5x' />
-        </Link>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(Youtube) }}
-          aria-label='Youtube'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-youtube fa-5x' />
-        </Link>
-      </div>
-      <div className='Icon'>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(Twitter) }}
-          aria-label='Twitter'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-twitter fa-5x' />
-        </Link>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(LinkedIn) }}
-          aria-label='LinkedIn'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-linkedin fa-5x' />
-        </Link>
-        <Link
-          className='Icon-indi'
-          onClick={() => { openInNewTab(Discord) }}
-          aria-label='discord'
-          style={{ color: '#000000' }}
-        >
-          <i className='fab fa-discord fa-5x' />
-        </Link>
-      </div>
-
-      <div className='aboutme' id='contact-me'>
-        <hr />
-        <h1 className='aboutme'>CONTACT ME</h1>
-        <p className='Textp'> contact me on email:- [contact][@][aayushgarg][.net] </p>
+        </div>
       </div>
     </div>
   )

@@ -1,18 +1,4 @@
-.aboutme{
-    display: block;
-    height: auto;
-    line-height: 90px;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
-    font-size: 3rem;
-    margin-left: auto;
-    margin-right: auto;  
-}
-p{
-    line-height: 30px;
-}
-.aboutme-image{
+.aboutme {
     display: block;
     height: auto;
     line-height: 90px;
@@ -22,37 +8,53 @@ p{
     font-size: 3rem;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 30px; 
-    border: 10px solid #000000; 
 }
 
-.Text{
+p {
+    line-height: 30px;
+}
+
+.aboutme-image {
+    display: block;
+    height: auto;
+    line-height: 90px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border: 10px solid #000000;
+}
+
+.Text {
     margin-top: 20px;
     font-size: 1.4rem;
     text-align: center;
 }
-.Textp{
-    font-size: 1.4rem;
-    text-align:justify;
+
+.social-icon-link-about {
+    color: #000;
+    font-size: 24px;
 }
-.Icon{
+
+.socialIcons {
     display: flex;
-    margin: 10px;
-    align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.Icon-indi{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    height: 50px;
-    width: 50px;
+
+.social-icons-about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
 }
+
 hr {
     border: 10px solid black;
     border-radius: 5px;
-  }
-  
+}
