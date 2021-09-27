@@ -10,6 +10,7 @@ const twitter = "https://twitter.com/gamer_1478";
 const linkedin = "https://www.linkedin.com/in/gamer1478/";
 const Facebook = "https://www.facebook.com/aayush.garg.official/";
 const github = 'https://github.com/gamer-1478'
+const mail = 'mailto:contact@aayushgarg.net?subject=Hi%20There,%20Wanted%20To%20Contact%20You&body=message%20goes%20here'
 
 const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -91,7 +92,7 @@ function HeroSection() {
                         </p>
                         <p
                             className='social-icon-link-about email'
-                            onClick={() => { openInNewTab(github) }}
+                            onClick={() => { openInNewTab(mail) }}
                             aria-label='email'>
                             <i className='fas fa-envelope fa-lg' />
                         </p>
