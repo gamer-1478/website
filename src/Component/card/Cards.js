@@ -12,8 +12,8 @@ async function returnJsonExtracted() {
 
     var NewtestArray = new Promise((resolve, reject) => {
         while (i < prodLen) {
-            i += 3
-            testArray.push(newCardJSON.splice(0, 3))
+            i += 2
+            testArray.push(newCardJSON.splice(0, 2))
 
             if (i >= prodLen - 1) {
                 resolve(testArray)

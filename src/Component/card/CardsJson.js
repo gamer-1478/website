@@ -61,6 +61,13 @@ export default function CardJSON() {
             source: 'https://github.com/gamer-1478/website-ssr',
             label: 'React SSR Express JS',
             deploy: 'https://ssr.aayushgarg.net/',
+        },
+        {
+            img_src: 'https://socialify.git.ci/gamer-1478/chepobin-public/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            text: 'Chepobin is a PasteBin Type OpenSource Text Sharing Hub.',
+            source: 'https://github.com/gamer-1478/chepobin-public',
+            label: 'Express JS Chepobin',
+            deploy: 'https://chepobin.tk',
         }
     ]))
 }
