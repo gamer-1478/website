@@ -38,6 +38,7 @@ p {
   height: 12vw;
   width: 12vw;
   border-radius: 100vw;
+  margin-right: 15px;
   border: 10px solid #000000;
 }
 
@@ -55,6 +56,7 @@ p {
 .socialIcons {
   display: flex;
   justify-content: center;
+  align-self: flex-end;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -69,6 +71,8 @@ p {
 
 .hero-desc-img-and-text-container {
   display: flex;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 .hero-desc-img-and-text {

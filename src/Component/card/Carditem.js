@@ -62,10 +62,11 @@ function CardItem(props) {
           </figure>
           <div className='cards__item__info'>
             <h5 className='cards__item__text'>{props.text}</h5>
-
-            <DeployButton path={props.deploy}/>
-            <SourceButton path={props.source}/>
-            <DetailButton path={props.path} />
+            <div className='cards__item__info__button'>
+              <DeployButton path={props.deploy} />
+              <SourceButton path={props.source} />
+              <DetailButton path={props.path} />
+            </div>
           </div>
         </div>
       </li>

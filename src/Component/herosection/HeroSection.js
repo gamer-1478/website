@@ -31,7 +31,8 @@ function HeroSection() {
                             I am aayush garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
                         <p className='Text'>
                             I can develop a full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
-                            I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.
+                            I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.</p>
+                        <p className='Text'>
                             For Mobile Apps I Like to use FLutter with VSC but can also use Android Studio and Xcode, I also like to Use Visual Studio Community for Making windows apps.<br></br></p>
                         <p className='Text'>
                             I am also very active in developing hardware and robotics, mostly i like to use arduino, esp32 and raspberry pi's.<br></br>
@@ -40,59 +41,60 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
-
-            <div className='socialIcons'>
-                <div className='social-icons-about-me'>
-                    <p
-                        className='social-icon-link-about facebook'
-                        onClick={() => { openInNewTab(Facebook) }}
-                        aria-label='Facebook'>
-                        <i className='fab fa-facebook-f fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about instagram'
-                        onClick={() => { openInNewTab(instagram) }}
-                        aria-label='Instagram'>
-                        <i className='fab fa-instagram fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about youtube'
-                        onClick={() => { openInNewTab(youtube) }}
-                        aria-label='Youtube'>
-                        <i className='fab fa-youtube fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about twitter'
-                        onClick={() => { openInNewTab(twitter) }}
-                        aria-label='Twitter'>
-                        <i className='fab fa-twitter fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about linkedin'
-                        onClick={() => { openInNewTab(linkedin) }}
-                        aria-label='LinkedIn'
-                    >
-                        <i className='fab fa-linkedin fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about discord'
-                        onClick={() => { openInNewTab(discord) }}
-                        aria-label='discord'
-                    >
-                        <i className='fab fa-discord fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about github'
-                        onClick={() => { openInNewTab(github) }}
-                        aria-label='github'>
-                        <i className='fab fa-github fa-lg' />
-                    </p>
-                    <p
-                        className='social-icon-link-about email'
-                        onClick={() => { openInNewTab(github) }}
-                        aria-label='email'>
-                        <i className='fas fa-envelope fa-lg' />
-                    </p>
+            <div className='socialContainerIcons'>
+                <div className='socialIcons'>
+                    <div className='social-icons-about-me'>
+                        <p
+                            className='social-icon-link-about facebook'
+                            onClick={() => { openInNewTab(Facebook) }}
+                            aria-label='Facebook'>
+                            <i className='fab fa-facebook-f fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about instagram'
+                            onClick={() => { openInNewTab(instagram) }}
+                            aria-label='Instagram'>
+                            <i className='fab fa-instagram fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about youtube'
+                            onClick={() => { openInNewTab(youtube) }}
+                            aria-label='Youtube'>
+                            <i className='fab fa-youtube fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about twitter'
+                            onClick={() => { openInNewTab(twitter) }}
+                            aria-label='Twitter'>
+                            <i className='fab fa-twitter fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about linkedin'
+                            onClick={() => { openInNewTab(linkedin) }}
+                            aria-label='LinkedIn'
+                        >
+                            <i className='fab fa-linkedin fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about discord'
+                            onClick={() => { openInNewTab(discord) }}
+                            aria-label='discord'
+                        >
+                            <i className='fab fa-discord fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about github'
+                            onClick={() => { openInNewTab(github) }}
+                            aria-label='github'>
+                            <i className='fab fa-github fa-lg' />
+                        </p>
+                        <p
+                            className='social-icon-link-about email'
+                            onClick={() => { openInNewTab(github) }}
+                            aria-label='email'>
+                            <i className='fas fa-envelope fa-lg' />
+                        </p>
+                    </div>
                 </div>
             </div>
         </div >
