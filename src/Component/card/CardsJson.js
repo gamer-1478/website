@@ -42,6 +42,13 @@ export default function CardJSON() {
 
         },
         {
+            img_src: 'https://socialify.git.ci/gamer-1478/TaskPlannerProject/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            text: 'Task Planner App For ATL Tinkerpreneur',
+            source: 'https://github.com/gamer-1478/TaskPlannerProject',
+            label: 'Android Studio',
+            deploy: 'https://github.com/gamer-1478/TaskPlannerProject',
+        },
+        {
             img_src:'https://socialify.git.ci/gamer-1478/toycathon/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
             text: 'Toycathon is a GOV hosted Comp, for which we made a android app with a physical board game and won.',
             source: 'https://github.com/gamer-1478/toycathon',
