@@ -19,8 +19,9 @@ const openInNewTab = (url) => {
 function HeroSection() {
     return (
         <div className='hero-container' id='home'>
-
-
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:display=swap" rel="stylesheet" />
             <div className='hero-desc-img-and-text-container'>
                 <img className='aboutme-image' src={myimg} alt='myImage' />
                 <div className='hero-desc-img-and-text'>
