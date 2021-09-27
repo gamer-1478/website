@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './HeroSection.css'
 import '../../App.css'
 import myimg from '../../image/logo.jpg'
@@ -53,7 +53,9 @@ function HeroSection() {
                         <p className='Text'>
                             I am also very active in developing hardware and robotics, mostly i like to use arduino, esp32 and raspberry pi's.<br></br>
                             I also like to develop circuit boards, and pcb's and other barebone components.<br></br></p>
-                        <p className='Text'>Can program in python, typescript, javascript, java, html, c# and much more, and i am also currently learning c++.</p>
+                        <p className='Text'>
+                            Can program in python, typescript, javascript, java, html, c# and much more, and i am also currently learning c++.
+                        </p>
                     </div>
                 </div>
             </div>
