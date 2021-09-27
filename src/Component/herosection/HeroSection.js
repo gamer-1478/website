@@ -5,11 +5,11 @@ import myimg from '../../image/logo.jpg'
 
 const discord = "https://discord.com/users/823237564130525184";
 const instagram = "https://www.instagram.com/aayushgarg.official";
-const youtube = "https://www.google.com/search?q=not+on+youtube"
-const twitter = "https://twitter.com/aysg_ays";
-const linkedin = "https://www.google.com/search?q=not+on+linkedin";
-const Facebook = "https://www.google.com/search?q=not+on+facebook";
-const github = ''
+const youtube = "https://www.youtube.com/channel/UC4PYDYab2Rf8Dz1VPzrCPfQ"
+const twitter = "https://twitter.com/gamer_1478";
+const linkedin = "https://www.linkedin.com/in/gamer1478/";
+const Facebook = "https://www.facebook.com/aayush.garg.official/";
+const github = 'https://github.com/gamer-1478'
 
 const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
