@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import './HeroSection.css'
 import '../../App.css'
 import myimg from '../../image/logo.jpg'
@@ -17,11 +17,25 @@ const openInNewTab = (url) => {
     if (newWindow) newWindow.opener = null
 }
 
+
 function HeroSection() {
+
+    const [socialSizeFa, setsocialSizeFa] = useState(' fa-lg')
+    const resizeSocialSize = () => {
+        if (window.innerWidth <= 960) {
+            setsocialSizeFa('')
+        } else {
+            setsocialSizeFa(' fa-lg')
+        }
+    }
+    useEffect(() => {
+        resizeSocialSize()
+    }, [])
+    window.addEventListener('resize', resizeSocialSize)
     return (
         <div className='hero-container' id='home'>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
             <div className='hero-desc-img-and-text-container'>
                 <img className='aboutme-image' src={myimg} alt='myImage' />
@@ -45,58 +59,61 @@ function HeroSection() {
             </div>
             <div className='socialContainerIcons'>
                 <div className='socialIcons'>
+
                     <div className='social-icons-about-me'>
                         <p
                             className='social-icon-link-about facebook'
                             onClick={() => { openInNewTab(Facebook) }}
                             aria-label='Facebook'>
-                            <i className='fab fa-facebook-f fa-lg' />
+                            <script></script>
+                            <i className={'fab fa-facebook-f' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about instagram'
                             onClick={() => { openInNewTab(instagram) }}
                             aria-label='Instagram'>
-                            <i className='fab fa-instagram fa-lg' />
+                            <i className={'fab fa-instagram' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about youtube'
                             onClick={() => { openInNewTab(youtube) }}
                             aria-label='Youtube'>
-                            <i className='fab fa-youtube fa-lg' />
+                            <i className={'fab fa-youtube' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about twitter'
                             onClick={() => { openInNewTab(twitter) }}
                             aria-label='Twitter'>
-                            <i className='fab fa-twitter fa-lg' />
+                            <i className={'fab fa-twitter' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about linkedin'
                             onClick={() => { openInNewTab(linkedin) }}
                             aria-label='LinkedIn'
                         >
-                            <i className='fab fa-linkedin fa-lg' />
+                            <i className={'fab fa-linkedin' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about discord'
                             onClick={() => { openInNewTab(discord) }}
                             aria-label='discord'
                         >
-                            <i className='fab fa-discord fa-lg' />
+                            <i className={'fab fa-discord' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about github'
                             onClick={() => { openInNewTab(github) }}
                             aria-label='github'>
-                            <i className='fab fa-github fa-lg' />
+                            <i className={'fab fa-github' + socialSizeFa} />
                         </p>
                         <p
                             className='social-icon-link-about email'
                             onClick={() => { openInNewTab(mail) }}
                             aria-label='email'>
-                            <i className='fas fa-envelope fa-lg' />
+                            <i className={'fas fa-envelope' + socialSizeFa} />
                         </p>
                     </div>
+
                 </div>
             </div>
         </div >

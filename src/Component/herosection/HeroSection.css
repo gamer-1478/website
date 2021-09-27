@@ -15,7 +15,7 @@
   font-size: 3vw;
 }
 
-.hero-container>p {
+/* .hero-container>p {
   margin-top: 8px;
   line-height: 2vw;
   color: #fff;
@@ -23,15 +23,11 @@
   vertical-align: middle;
   font-size: 1vw;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+} */
 
 .aboutme {
   line-height: 3vw;
   font-size: 2vw;
-}
-
-p {
-  line-height: 1.5vw;
 }
 
 .aboutme-image {
@@ -88,32 +84,57 @@ hr {
 }
 
 @media screen and (max-width: 960px) {
+  .social-icons-about-me {
+    width: 300px;
+  }
   .aboutme-image {
     height: 18vw;
     width: 18vw;
   }
   .aboutme {
-    font-size: 4vw;
-  }
-  .hero-container>h1 {
     font-size: 6vw;
+    line-height: 8vw;
   }
   .Text {
     font-size: 2vw;
-    line-height: 3vw;
+    line-height: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .aboutme-image {
+    height: 18vw;
+    width: 18vw;
+  }
+  .aboutme {
+    font-size: 6vw;
+    line-height: 8vw;
+  }
+  .Text {
+    font-size: 2vw;
+    line-height: 2.3vw;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .Text {
-    font-size: 3vw;
-    line-height: 3vw;
-  }
   .btn-mobile {
     display: block;
     text-decoration: none;
   }
   .btn {
     width: 100%;
+  }
+  .aboutme {
+    font-size: 8vw;
+    line-height: 10vw;
+  }
+  .Text {
+    margin-top: 1vh;
+    font-size: 2vh;
+    line-height: 2.1vh;
+  }
+  .aboutme-image {
+    height: 25vw;
+    width: 25vw;
   }
 }
