@@ -52,13 +52,13 @@ function NavigationBar() {
                             </NavHashLink>
                         </li>
                         <li>
-                            <HashLink to='/about-me#contact-me'
+                            <HashLink to='/notes'
                                 className='nav-links-mobile' onClick={closeMobileMenu}>
-                                Contant me
+                                Blog/Notes
                             </HashLink>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline' offset='80' path='/about-me#contact-me'>Contact Me</Button>}
+                    {button && <Button buttonStyle='btn--outline' offset='80' path='/notes'>Blog/Notes</Button>}
                 </div>
             </nav>
         </>

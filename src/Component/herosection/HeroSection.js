@@ -19,14 +19,28 @@ const openInNewTab = (url) => {
 function HeroSection() {
     return (
         <div className='hero-container' id='home'>
-            <img className='aboutme-image' src={myimg} alt='myImage' />
 
-            <h1 className='aboutme'>Hey There!</h1>
-            <p className='Text'> I am aayush garg, and i am a High School Student. <br></br>
-                I can develop a full stack, most projects are homework or for fun<br></br>
-                If you have any idea's for a fun project or a usefull one do contact using email given below</p>
-            <p className='Text'>Can program in python, typescript, javascript, java, php, html and many more.
-            </p>
+
+            <div className='hero-desc-img-and-text-container'>
+                <img className='aboutme-image' src={myimg} alt='myImage' />
+                <div className='hero-desc-img-and-text'>
+                    <h1 className='aboutme'>Hey There!</h1>
+
+                    <div className='hero-desc-text'>
+                        <p className='Text'>
+                            I am aayush garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
+                        <p className='Text'>
+                            I can develop a full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
+                            I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.
+                            For Mobile Apps I Like to use FLutter with VSC but can also use Android Studio and Xcode, I also like to Use Visual Studio Community for Making windows apps.<br></br></p>
+                        <p className='Text'>
+                            I am also very active in developing hardware and robotics, mostly i like to use arduino, esp32 and raspberry pi's.<br></br>
+                            I also like to develop circuit boards, and pcb's and other barebone components.<br></br></p>
+                        <p className='Text'>Can program in python, typescript, javascript, java, html, c# and much more, and i am also currently learning c++.</p>
+                    </div>
+                </div>
+            </div>
+
             <div className='socialIcons'>
                 <div className='social-icons-about-me'>
                     <p
@@ -81,7 +95,7 @@ function HeroSection() {
                     </p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
