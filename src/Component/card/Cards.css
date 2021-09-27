@@ -18,12 +18,13 @@
 
 .cards__item__info__button {
   margin-top: 0.4vw;
-  display: flex;
+  display: flexbox;
 }
 
 .cards__item__info__button button{
   margin-right: 1vw;
   border: none;
+  margin-top: 1vw;
   border-radius: 14px;
   padding: 5px 10px;
   background-color: #000;
@@ -37,8 +38,8 @@
 .cards__item {
   border-radius: 20px;
   display: flex;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 450px;
   margin: 10px 10px 10px 10px;
   float: left;
 }
