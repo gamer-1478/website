@@ -51,6 +51,7 @@ p {
 }
 
 .social-icon-link-about {
+  cursor: pointer;
   color: #fff;
   font-size: 24px;
 }
