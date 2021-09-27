@@ -84,8 +84,6 @@ hr {
   border-radius: 5px;
 }
 
-.hero-desc-text {}
-
 @media screen and (max-width: 960px) {
   .aboutme-image {
     height: 18vw;
