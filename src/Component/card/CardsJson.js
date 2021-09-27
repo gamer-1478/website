@@ -47,6 +47,13 @@ export default function CardJSON() {
             source: 'https://github.com/gamer-1478/toycathon',
             label:'Android Game Flutter',
             deploy: 'https://google.com',
+        },
+        {
+            img_src: 'https://socialify.git.ci/gamer-1478/website-ssr/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            text: 'Server Side Rendering With React Deployed On Heroku',
+            source: 'https://github.com/gamer-1478/website-ssr',
+            label: 'React SSR Express JS',
+            deploy: 'https://ssr.aayushgarg.net/',
         }
     ]))
 }
