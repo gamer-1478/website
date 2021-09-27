@@ -19,8 +19,8 @@ const openInNewTab = (url) => {
 
 
 function HeroSection() {
-
     const [socialSizeFa, setsocialSizeFa] = useState(' fa-lg')
+
     const resizeSocialSize = () => {
         if (window.innerWidth <= 960) {
             setsocialSizeFa('')
