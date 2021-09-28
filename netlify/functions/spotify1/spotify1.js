@@ -8,7 +8,7 @@ exports.handler = async function () {
     try {
       await fetch(API_ENDPOINT, {
         "method": "GET",
-        "headers": { "Authorization": "Bearer BQD7zLtFuHVpB0A71Pmcme4DC9u3gGEESInayOD4dyk_hAa7nOr0o79FfPka3ru0HGgog4comIvcrg5-SocDhJeVuKo_RrabGeJvvLuUz0nARTL_sY_pCIzQCg5AQ1_azpgbJAXqtCWm7_ZtURKYx8X3ScR3dkYu1hFI" }
+        "headers": { "Authorization": "Bearer AQCuFNFkpWtHQU8OmMC6tJzUR8rlQKxMJaRQ3MCpZixry8sLKnpw_eLq9sU1UU-dlz5HSs6PR5asSuB9f91DFwpP2Sj2Z7D5tpKTLAB-KEBMZv5yoKmQbSQ2YVhCMGFRC8PPmg-1BRRbhoqIG7Sup9Zt1haSxblO-R5vpBFH_kzoTLamx_wkPPywXNjuJPe2WpP_w0j03alw2k29eeqLFJ9I3jCg9ptPWFTyqLP7SUQ6oXBDOBNHi-zb6vlUhAs" }
       }).then((result) => { resolve(result.json()) })
       // handle response
     } catch (err) {
