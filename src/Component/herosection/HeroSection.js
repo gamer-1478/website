@@ -58,7 +58,7 @@ function HeroSection() {
 
                     <div className='hero-desc-text'>
                         <p className='Text'>
-                            I am aayush garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
+                            I am Aayush Garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
                         <p className='Text'>
                             I can develop a full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
                             I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.</p>
@@ -72,7 +72,7 @@ function HeroSection() {
                         </p>
                         <p className='Text'>
                             I Like To Listen To A wide Variety of music. {currentMusic ?
-                                <> I am Currently Listening to <a href={Handler.external_urls.spotify}> {Handler.name} by {Handler.artists.map((el, ind) => { if (ind === 0) { return el.name } else { return ', ' + el.name }})}</a> on Spotify </> : 'Looks Like I am not using Spotify right now.'}
+                                <> I am Currently Listening to <a href={Handler.external_urls.spotify}> {Handler.name} by {Handler.artists.map((el, ind) => { if (ind === 0) { return el.name } else { return ', ' + el.name }})}</a> on Spotify. </> : 'Looks Like I am not using Spotify right now.'}
                         </p>
                     </div>
                 </div>
