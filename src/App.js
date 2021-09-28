@@ -24,6 +24,7 @@ function Redirect(url) {
     </div>
   )
 }
+
 function App() {
   return (
     <div>

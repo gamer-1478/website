@@ -19,7 +19,8 @@ const openInNewTab = (url) => {
 
 function HeroSection() {
     const [socialSizeFa, setsocialSizeFa] = useState(' fa-lg')
-
+    const [currentMusic, setcurrentMusic] = useState('Looks Like I am not using Spotify right now.')
+    
     const resizeSocialSize = () => {
         if (window.innerWidth <= 960) {
             setsocialSizeFa('')
@@ -54,6 +55,9 @@ function HeroSection() {
                             I also like to develop circuit boards, and pcb's and other barebone components.<br></br></p>
                         <p className='Text'>
                             Can program in python, typescript, javascript, java, html, c# and much more, and i am also currently learning c++.
+                        </p>
+                        <p className='Text'>
+                            I Like To Listen To A wide Variety of music. {currentMusic}
                         </p>
                     </div>
                 </div>
