@@ -69,20 +69,4 @@ export default async function handler() {
       }
     }
   }
-  else {
-    spotifyDoc.set({
-      created: Date.now() / 1000,
-      "refresh_token": "AQAzF4RMZtfQ4in661xLV7s560JGveHFnvFvGqt5MxDXNenv4h7PN3-_gZsE0yQKDE1LwpuQyJ5s-hpMFgwV3ja1N8wRXbGy_ZtOmnPRiTqmt-n8BPzRuLvQGkAS4RC4I4w",
-      data_: {
-        "access_token": "BQAuVvQlcfBhIPmb0CmGopVL7MprN2SIh_G08FoMMS72xX5dtT15fi7Qm3ngLcDeSZw_nXqNNgxOBpNxEOtEVQnA0_oFlNJZmcVsEiSPGc6fzwlYzYvThBid_hJ929YRsrUS-IKfllTiNDX3r6qH6dx2huDoZNmZPD59ax5GdK3it2No6Rtoy7s",
-        "token_type": "Bearer",
-        "expires_in": 3600,
-        "scope": "user-read-playback-state user-read-currently-playing user-read-email user-read-private"
-      }
-    })
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Data Didn't exist, just added it." })
-    }
-  }
 }
