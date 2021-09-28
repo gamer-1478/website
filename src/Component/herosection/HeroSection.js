@@ -72,7 +72,7 @@ function HeroSection() {
                         </p>
                         <p className='Text'>
                             I Like To Listen To A wide Variety of music. {currentMusic ?
-                                <> I am Currently Listening to <a href={Handler.external_urls.spotify}> {Handler.name} by {Handler.artists.map((el, ind) => { return el.name + ' ' })}</a> on spotify </> : 'Looks Like I am not using Spotify right now.'}
+                                <> I am Currently Listening to <a href={Handler.external_urls.spotify}> {Handler.name} by {Handler.artists.map((el, ind) => { if (ind === 0) { return el.name } else { return ', ' + el.name }})}</a> on Spotify </> : 'Looks Like I am not using Spotify right now.'}
                         </p>
                     </div>
                 </div>
