@@ -3,7 +3,7 @@
 const fetch = require('node-fetch')
 const API_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing?market=IN'
 
-const handler = async function (event, context) {
+exports.handler = async function () {
   let response = new Promise(async (resolve, reject) => {
     try {
       await fetch(API_ENDPOINT, {
@@ -20,7 +20,8 @@ const handler = async function (event, context) {
         })
       })
     }
-  }).then((resolve) => { return resolve }).catch((reject) => { return reject })
+  }).then((resolve) => { return resolve })
+  .catch((reject) => { return reject })
 
   return {
     statusCode: 200,
@@ -29,5 +30,3 @@ const handler = async function (event, context) {
     })
   }
 }
-
-module.exports = { handler }
