@@ -56,7 +56,7 @@ export default async function handler() {
       }).then((resolve) => { return resolve })
         .catch((reject) => { return reject })
       await PstResp.then(async () => {
-        spotifyDoc.set({
+        spotifyDoc.update({
           created: Date.now() / 1000,
           data_: await PstResp
         })
