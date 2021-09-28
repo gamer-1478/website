@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './HeroSection.css'
 import '../../App.css'
 import myimg from '../../image/logo.jpg'
+import handler from '../../spotify1'
 
 const discord = "https://discord.com/users/823237564130525184";
 const instagram = "https://www.instagram.com/aayushgarg.official";
@@ -19,8 +20,9 @@ const openInNewTab = (url) => {
 
 function HeroSection() {
     const [socialSizeFa, setsocialSizeFa] = useState(' fa-lg')
-    const [currentMusic, setcurrentMusic] = useState('Looks Like I am not using Spotify right now.')
-    
+    const [currentMusic, setcurrentMusic] = useState(false)
+    const [Handler, SetHandler] = useState('')
+
     const resizeSocialSize = () => {
         if (window.innerWidth <= 960) {
             setsocialSizeFa('')
@@ -29,6 +31,18 @@ function HeroSection() {
         }
     }
     useEffect(() => {
+        async function acd() {
+            let handlerNew = await handler();
+            handlerNew = await handlerNew.body;
+            if (JSON.parse(handlerNew).hasOwnProperty('data') && JSON.parse(handlerNew).data.hasOwnProperty('item') && JSON.parse(handlerNew).data.item.hasOwnProperty('name')) {
+                console.log(JSON.parse(handlerNew).data)
+                SetHandler(JSON.parse(handlerNew).data.item)
+                setcurrentMusic(true)
+            }
+            else {
+            }
+        }
+        acd()
         resizeSocialSize()
     }, [])
     window.addEventListener('resize', resizeSocialSize)
@@ -57,7 +71,8 @@ function HeroSection() {
                             Can program in python, typescript, javascript, java, html, c# and much more, and i am also currently learning c++.
                         </p>
                         <p className='Text'>
-                            I Like To Listen To A wide Variety of music. {currentMusic}
+                            I Like To Listen To A wide Variety of music. {currentMusic ?
+                                <> I am Currently Listening to <a href={Handler.external_urls.spotify}> {Handler.name} by {Handler.artists.map((el, ind) => { return el.name + ' ' })}</a> on spotify </> : 'Looks Like I am not using Spotify right now.'}
                         </p>
                     </div>
                 </div>

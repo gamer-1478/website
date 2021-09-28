@@ -7,6 +7,7 @@ import GithubRepositories from './Component/pages/gitrepos/GithubRepositories'
 import CyborticsHumanoids from './Component/pages/cybortics/CyborticsHumanoid'
 import Footer from './Component/footer/Footer'
 import fourzerofour from "./Component/404/404";
+import Test from './Component/test'
 //import QuizLoad from './Component/pages/quiz/QuizLoad';
 
 function Aihome() {
@@ -38,6 +39,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
             <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={() => { Redirect('https://ai-dsm-gamer.netlify.app') }} />
             {/* <Route path={process.env.PUBLIC_URL + '/quiz-science-hhw'} exact component={QuizLoad} /> */}
+            <Route path={process.env.PUBLIC_URL + '/Test'} exact component={Test} />
             <Route path="*" exact component={fourzerofour} />
           </Switch>
         </div>
