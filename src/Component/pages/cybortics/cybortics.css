@@ -1,4 +1,4 @@
-.cybortics-humanoid{
+.cybortics-humanoid {
     display: block;
     height: auto;
     line-height: 90px;
@@ -7,20 +7,27 @@
     align-self: flex-start;
     font-size: 3rem;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
 }
-.centerp{
+
+.centerp {
     font-size: 1.5rem;
     text-align: center;
     margin: 30px;
 }
-.centerlp{
+
+.centerlp {
     font-size: 1.5rem;
     text-align: left;
     margin: 30px;
 }
-.centerlph1{
+
+.centerlph1 {
     font-size: 3rem;
     text-align: left;
     margin: 30px;
+}
+
+.cybortics-humanoid{
+    text-align: center;
 }
