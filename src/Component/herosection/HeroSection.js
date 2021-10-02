@@ -35,7 +35,6 @@ function HeroSection() {
             let handlerNew = await handler();
             handlerNew = await handlerNew.body;
             if (JSON.parse(handlerNew).hasOwnProperty('data') && JSON.parse(handlerNew).data.hasOwnProperty('item') && JSON.parse(handlerNew).data.item.hasOwnProperty('name')) {
-                console.log(JSON.parse(handlerNew).data)
                 SetHandler(JSON.parse(handlerNew).data.item)
                 setcurrentMusic(true)
             }

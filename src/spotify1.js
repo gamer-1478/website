@@ -3,14 +3,14 @@ import firebase from './firebase';
 
 const API_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing?market=IN'
 const spotifyDoc = firebase.firestore().collection('spotify').doc('spotify');
-let Fdoc = await spotifyDoc.get()
 
 export default async function handler() {
+  let Fdoc = await spotifyDoc.get()
 
   if (Fdoc.exists) {
     Fdoc = await Fdoc.data()
     if (Fdoc.hasOwnProperty('created') && Fdoc.created + Fdoc.data_.expires_in > Date.now() / 1000) {
-      return await GetDataSpot("abcd");
+      return await GetDataSpot();
     }
     else {
       let PstResp = new Promise(async (resolve, reject) => {
@@ -39,13 +39,15 @@ export default async function handler() {
           data_: await PstResp
         })
       })
-      return await GetDataSpot(await PstResp);
+      return await GetDataSpot();
     }
   }
 }
 
-async function GetDataSpot(awaitThis_) {
-  await awaitThis_;
+async function GetDataSpot() {
+  let Fdoc = await spotifyDoc.get()
+  Fdoc = await Fdoc.data()
+
   let response = new Promise(async (resolve, reject) => {
     try {
       await fetch(API_ENDPOINT, {
