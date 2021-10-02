@@ -3,36 +3,14 @@ import firebase from './firebase';
 
 const API_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing?market=IN'
 const spotifyDoc = firebase.firestore().collection('spotify').doc('spotify');
+let Fdoc = await spotifyDoc.get()
 
 export default async function handler() {
-  let Fdoc = await spotifyDoc.get()
+
   if (Fdoc.exists) {
     Fdoc = await Fdoc.data()
     if (Fdoc.hasOwnProperty('created') && Fdoc.created + Fdoc.data_.expires_in > Date.now() / 1000) {
-      let response = new Promise(async (resolve, reject) => {
-        try {
-          await fetch(API_ENDPOINT, {
-            "method": "GET",
-            "headers": { "Authorization": "Bearer " + Fdoc.data_.access_token }
-          }).then((result) => { resolve(result.json());})
-          // handle response
-        } catch (err) {
-          reject({
-            statusCode: err.statusCode || 500,
-            body: JSON.stringify({
-              error: err.message
-            })
-          })
-        }
-      }).then((resolve) => { return resolve })
-        .catch((reject) => { return reject })
-
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
-          data: await response
-        })
-      }
+      return await GetDataSpot("abcd");
     }
     else {
       let PstResp = new Promise(async (resolve, reject) => {
@@ -61,12 +39,35 @@ export default async function handler() {
           data_: await PstResp
         })
       })
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
-          data: PstResp
-        })
-      }
+      return await GetDataSpot(await PstResp);
     }
+  }
+}
+
+async function GetDataSpot(awaitThis_) {
+  await awaitThis_;
+  let response = new Promise(async (resolve, reject) => {
+    try {
+      await fetch(API_ENDPOINT, {
+        "method": "GET",
+        "headers": { "Authorization": "Bearer " + Fdoc.data_.access_token }
+      }).then((result) => { resolve(result.json()); })
+      // handle response
+    } catch (err) {
+      reject({
+        statusCode: err.statusCode || 500,
+        body: JSON.stringify({
+          error: err.message
+        })
+      })
+    }
+  }).then((resolve) => { return resolve })
+    .catch((reject) => { return reject })
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      data: await response
+    })
   }
 }
