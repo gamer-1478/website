@@ -18,7 +18,7 @@ export default function CardJSON() {
             img_src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Simple_Periodic_Table_Chart-blocks.svg/1200px-Simple_Periodic_Table_Chart-blocks.svg.png",
             text: 'MCQ Periodic Table Quiz, Randomly generated 10 questions.',
             label: 'Chemistry-Quiz',
-            deploy: '/quiz-science-hhw'
+            deploy: 'https://quiz-app-aayush.netlify.app/'
         },
         {
             img_src: "https://socialify.git.ci/gamer-1478/cpu-benchmark/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark",
