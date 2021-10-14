@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 //import {usePopper} from 'react-popper';
 const discord = "https://discord.com/users/823237564130525184";
 const instagram = "https://www.instagram.com/aayushgarg.official";
-const youtube = "https://www.google.com/search?q=not+on+youtube"
-const twitter = "https://twitter.com/aysg_ays";
-const linkedin = "https://www.google.com/search?q=not+on+linkedin";
-const Facebook = "https://www.google.com/search?q=not+on+facebook";
+const youtube = "https://www.youtube.com/channel/UC4PYDYab2Rf8Dz1VPzrCPfQ"
+const twitter = "https://twitter.com/gamer_1478";
+const linkedin = "https://www.linkedin.com/in/gamer1478/";
+const Facebook = "https://www.facebook.com/aayush.garg.official/";
+const github = 'https://github.com/gamer-1478'
+const mail = 'mailto:contact@aayushgarg.net?subject=Hi%20There,%20Wanted%20To%20Contact%20You&body=message%20goes%20here'
 
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -67,6 +69,19 @@ function Footer() {
             >
               <i className='fab fa-discord' />
             </p>
+            <p
+              className='social-icon-link github'
+              onClick={() => { openInNewTab(github) }}
+              aria-label='github'>
+              <i className='fab fa-github' />
+            </p>
+            <p
+              className='social-icon-link email'
+              onClick={() => { openInNewTab(mail) }}
+              aria-label='email'>
+              <i className='fas fa-envelope' />
+            </p>
+
           </div>
         </div>
       </section>
