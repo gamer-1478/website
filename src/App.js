@@ -6,6 +6,7 @@ import Home from './Component/pages/Home'
 import CyborticsHumanoids from './Component/pages/cybortics/CyborticsHumanoid'
 import Footer from './Component/footer/Footer'
 import fourzerofour from "./Component/404/404";
+import Logger from './Component/pages/Logger';
 
 function Aihome() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids} />
             <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
             <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={() => { Redirect('https://ai-dsm-gamer.netlify.app') }} />
+            <Route path={process.env.PUBLIC_URL + '/discord'} exact component={Logger}/>
             <Route path="*" exact component={fourzerofour} />
           </Switch>
         </div>
