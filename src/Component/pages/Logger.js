@@ -25,9 +25,10 @@ export default function Logger() {
 
     return (
         <div>
-            {
+            {/*
                 logged ? <div>{window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}</div> : <div><p>false</p></div>
-            }
+            */}
+        <div>{window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}</div>
                 </div>
     );
 }
