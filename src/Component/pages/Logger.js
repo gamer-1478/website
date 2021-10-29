@@ -1,12 +1,12 @@
 import { React, useState, useEffect } from 'react'
-import firebase from '../../firebase';
-import axios from 'axios'
+//import firebase from '../../firebase';
+//import axios from 'axios'
 
-const logCollec = firebase.firestore().collection('logged');
+//const logCollec = firebase.firestore().collection('logged');
 
 export default function Logger() {
 
-    const [logged, setLogged] = useState(false)
+    /*const [logged, setLogged] = useState(false)
     //creating function to load ip address from the API
     const getData = async () => {
         const res = await axios.get('https://geolocation-db.com/json/')
@@ -21,7 +21,7 @@ export default function Logger() {
         //passing getData method to the lifecycle method
         getData()
 
-    }, [])
+    }, [])*/
 
     return (
         <div>
