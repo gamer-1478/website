@@ -62,6 +62,7 @@
 }
 
 .Text a {
+  cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-decoration: none;
@@ -95,6 +96,7 @@ hr {
     font-size: 3vw;
     line-height: 4vw;
   }
+
   .Text {
     font-size: 1.5vw;
     line-height: 1.8vw;
@@ -105,14 +107,17 @@ hr {
   .social-icons-about-me {
     width: 300px;
   }
+
   .aboutme-image {
     height: 12vw;
     width: 12vw;
   }
+
   .aboutme {
     font-size: 6vw;
     line-height: 8vw;
   }
+
   .Text {
     font-size: 2vw;
     line-height: 2.5vw;
@@ -124,18 +129,22 @@ hr {
     display: block;
     text-decoration: none;
   }
+
   .btn {
     width: 100%;
   }
+
   .aboutme {
     font-size: 8vw;
     line-height: 10vw;
   }
+
   .Text {
     margin-top: 1vh;
     font-size: 2vh;
     line-height: 2.1vh;
   }
+
   .aboutme-image {
     height: 20vw;
     width: 20vw;
