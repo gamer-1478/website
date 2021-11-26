@@ -28,20 +28,20 @@ function App() {
   return (
     <div>
       <Router>
-        <NavigationBar />
         <div style={{ minHeight: '78.1vh' }}>
+          <NavigationBar />
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
             <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids} />
             <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
             <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={() => { Redirect('https://ai-dsm-gamer.netlify.app') }} />
-            <Route path={process.env.PUBLIC_URL + '/discord'} exact component={Logger}/>
+            <Route path={process.env.PUBLIC_URL + '/discord'} exact component={Logger} />
             <Route path="*" exact component={fourzerofour} />
           </Switch>
+          <Footer />
         </div>
-        <Footer />
       </Router>
-    </div>
+    </div >
   );
 }
 export default App;
