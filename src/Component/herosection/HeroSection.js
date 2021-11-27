@@ -59,7 +59,7 @@ function HeroSection() {
                         <p className='Text'>
                             I am Aayush Garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
                         <p className='Text'>
-                            I can develop a full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
+                            I can develop full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
                             I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.</p>
                         <p className='Text'>
                             For Mobile Apps I Like to use FLutter with VSC but can also use Android Studio and Xcode, I also like to Use Visual Studio Community for Making windows apps.<br></br></p>
