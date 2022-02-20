@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import NavigationBar from './Component/navigation/NavigationBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router'
 import Home from './Component/pages/Home'
 import CyborticsHumanoids from './Component/pages/cybortics/CyborticsHumanoid'
 import Footer from './Component/footer/Footer'
-import fourzerofour from "./Component/404/404";
+import Fourzerofour from "./Component/404/404";
 import Logger from './Component/pages/Logger';
 
 function Aihome() {
@@ -24,20 +25,28 @@ function Redirect(url) {
   )
 }
 
+function AiDsm() {
+  return (
+    <div>
+      {(() => { Redirect('https://ai-dsm-gamer.netlify.app') })()}
+    </div>
+  )
+}
+
 function App() {
   return (
     <div>
       <Router>
         <div style={{ minHeight: '78.1vh' }}>
           <NavigationBar />
-          <Switch>
-            <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
-            <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} exact component={CyborticsHumanoids} />
-            <Route path={process.env.PUBLIC_URL + '/ai'} exact component={Aihome} />
-            <Route path={process.env.PUBLIC_URL + '/ai-dsm'} exact component={() => { Redirect('https://ai-dsm-gamer.netlify.app') }} />
-            <Route path={process.env.PUBLIC_URL + '/discord'} exact component={Logger} />
-            <Route path="*" exact component={fourzerofour} />
-          </Switch>
+          <Routes>
+            <Route path={process.env.PUBLIC_URL + '/'} element={<Home />} />
+            <Route path={process.env.PUBLIC_URL + '/cybortics-humanoid'} element={<CyborticsHumanoids />} />
+            <Route path={process.env.PUBLIC_URL + '/ai'} element={<Aihome />} />
+            <Route path={process.env.PUBLIC_URL + '/ai-dsm'} element={<AiDsm />} />
+            <Route path={process.env.PUBLIC_URL + '/discord'} element={<Logger />} />
+            <Route path="*" element={<Fourzerofour />} />
+          </Routes>
           <Footer />
         </div>
       </Router>
