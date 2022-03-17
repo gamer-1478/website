@@ -57,7 +57,7 @@ function HeroSection() {
 
                     <div className='hero-desc-text'>
                         <p className='Text'>
-                            I am Aayush Garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon.</p>
+                            I am Aayush Garg, and i am a High School Student Studying in Amity International School Sector 46 Gurgaon. I am also the VP Of our Club Tech Syndicate.</p>
                         <p className='Text'>
                             I can develop full stack Web Apps, Android and IOS apps, flutter apps, windows universal apps, etc.
                             I Like to use NodeJS, Express JS or Flask for backend, and react js, svelte or ejs for frontend.</p>
