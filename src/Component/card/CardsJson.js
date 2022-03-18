@@ -1,14 +1,14 @@
 export default function CardJSON() {
     return JSON.parse(JSON.stringify([
         {
-            img_src: 'https://socialify.git.ci/aayushGarg-1748/open-mrs-mail/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            img_src: 'https://cdn.discordapp.com/attachments/913641847086252053/954239751949516810/unknown.png',
             text: 'GCI OpenMRS (2019).',
             source: 'https://github.com/aayushGarg-1748/open-mrs-mail',
             label: 'HTML CSS',
             deploy: 'https://aayushgarg-1748.github.io/open-mrs-mail/'
         },
         {
-            img_src: 'https://socialify.git.ci/aayushGarg-1748/openmrs-404/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            img_src: 'https://cdn.discordapp.com/attachments/913641847086252053/954237901934305280/unknown.png',
             text: 'GCI OpenMRS 404 Page Task (2019).',
             source: 'https://github.com/aayushGarg-1748/openmrs-404',
             label: 'HTML CSS',
@@ -34,7 +34,7 @@ export default function CardJSON() {
             path: '/cybortics-humanoid'
         },
         {
-            img_src: "https://socialify.git.ci/gamer-1478/ai-dsm/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark",
+            img_src: "https://cdn.discordapp.com/attachments/913641847086252053/954238103525146644/unknown.png",
             text: 'Online Simulated A.I. For A Simulated Home',
             label: 'AI Project',
             deploy: '/ai-dsm',
@@ -70,7 +70,7 @@ export default function CardJSON() {
             text: 'Syntax Event Entry For TS, A simple and robust music streaming platform.',
             label: 'NodeJS-Project'
         }, {
-            img_src: 'https://socialify.git.ci/ion05/alphabit-prelims/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            img_src: 'https://cdn.discordapp.com/attachments/913641847086252053/954242877574221844/unknown.png',
             source: 'https://github.com/ion05/alphabit-prelims',
             text: 'Alphabit Event Entry For TS',
             label: 'NodeJS-Project'
@@ -92,13 +92,13 @@ export default function CardJSON() {
         }, {
             text: 'Programming Platform Like Hackkerank Built From Ground Up For Inhoue Events.',
             source: 'https://github.com/techsyndicate/Programming-Platform',
-            img_src: 'https://socialify.git.ci/techsyndicate/Programming-Platform/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            img_src: 'https://cdn.discordapp.com/attachments/913641847086252053/954235822264172584/unknown.png',
             label: 'Programming-Platform',
             deploy:'https://ts-prog.herokuapp.com'
         }, {
             text: 'Website Developed For Anirudh Chaturvedi.',
             source: 'https://github.com/gamer-1478/portfolio-site',
-            img_src: 'https://socialify.git.ci/gamer-1478/portfolio-site/image?description=1&font=Raleway&issues=1&language=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark',
+            img_src: 'https://cdn.discordapp.com/attachments/913641847086252053/954235238547075165/unknown.png',
             label: 'Anirudh-Portfolio',
             deploy: 'https://www.anirudhchaturvedi.me/'
         }
