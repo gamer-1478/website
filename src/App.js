@@ -25,6 +25,14 @@ function Redirect(url) {
   )
 }
 
+function ATLHACKS() {
+  return (
+    <div>
+      {(() => { Redirect('https://atlhack.herokuapp.com/') })()}
+    </div>
+  )
+}
+
 function AiDsm() {
   return (
     <div>
@@ -45,6 +53,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/ai'} element={<Aihome />} />
             <Route path={process.env.PUBLIC_URL + '/ai-dsm'} element={<AiDsm />} />
             <Route path={process.env.PUBLIC_URL + '/discord'} element={<Logger />} />
+            <Route path={process.env.PUBLIC_URL + '/atlhacks'} element={<ATLHACKS />} />
             <Route path="*" element={<Fourzerofour />} />
           </Routes>
           <Footer />
