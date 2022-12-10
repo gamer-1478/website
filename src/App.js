@@ -28,7 +28,7 @@ function Redirect(url) {
 function ATLHACKS() {
   return (
     <div>
-      {(() => { Redirect('https://atlhack.herokuapp.com/') })()}
+      {(() => { Redirect('https://mise-atl.herokuapp.com/') })()}
     </div>
   )
 }
