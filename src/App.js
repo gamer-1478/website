@@ -63,7 +63,7 @@ function App() {
             <Route path={process.env.PUBLIC_URL + '/ai-dsm'} element={<AiDsm />} />
             <Route path={process.env.PUBLIC_URL + '/discord'} element={<Logger />} />
             <Route path={process.env.PUBLIC_URL + '/atlhack'} element={<ATLHACKS />} />
-            <Route path={process.env.PUBLIC_URL + '/atlhack'} element={<LaunchX />} />
+            <Route path={process.env.PUBLIC_URL + '/video-launchx'} element={<LaunchX />} />
             <Route path="*" element={<Fourzerofour />} />
           </Routes>
           <Footer />
