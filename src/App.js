@@ -17,6 +17,15 @@ function Aihome() {
   )
 }
 
+function LaunchX() {
+  return (
+    <div>
+      {window.location.href = "https://youtu.be/-QJ0fFIIKEM"}
+    </div>
+  )
+}
+
+
 function Redirect(url) {
   return (
     <div>
